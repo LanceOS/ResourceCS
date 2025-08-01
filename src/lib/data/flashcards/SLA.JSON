@@ -1,0 +1,130 @@
+[
+  {
+    "question": "What is a Service Level Agreement (SLA)?",
+    "answer": "A Service Level Agreement (SLA) is a contract between a service provider and a customer that defines the level of service the customer can expect. It sets clear expectations and provides a framework for accountability.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education: What is a service-level agreement (SLA)?",
+        "source": "https://www.ibm.com/topics/service-level-agreement"
+      },
+      {
+        "name": "Google Cloud: What is a Service Level Agreement?",
+        "source": "https://cloud.google.com/learn/what-is-a-service-level-agreement"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Key components of an SLA",
+        "link": "https://www.salesforce.com/resources/articles/key-components-of-an-sla/"
+      },
+      {
+        "name": "Service Level Objectives (SLOs)",
+        "link": "https://sre.google/sre-book/service-level-agreements/"
+      },
+      {
+        "name": "Service Level Indicators (SLIs)",
+        "link": "https://sre.google/sre-book/service-level-agreements/"
+      }
+    ]
+  },
+  {
+    "question": "What are some common components of an SLA?",
+    "answer": "Common components include a service description, performance metrics (like uptime and response time), responsibilities of both parties, penalties for non-compliance, and reporting procedures.",
+    "sources": [
+      {
+        "name": "Atlassian: The ultimate guide to service level agreements",
+        "source": "https://www.atlassian.com/itsm/service-level-management/what-is-an-sla"
+      },
+      {
+        "name": "Salesforce: What Is an SLA? And Why Are They So Important?",
+        "source": "https://www.salesforce.com/resources/articles/key-components-of-an-sla/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Performance metrics in SLAs",
+        "link": "https://www.bmc.com/blogs/sla-metrics/"
+      },
+      {
+        "name": "Penalty clauses and remedies in SLAs",
+        "link": "https://www.contract-law.co.uk/breach-of-contract-remedies-damages.html"
+      }
+    ]
+  },
+  {
+    "question": "What is the difference between an SLA, SLO, and SLI?",
+    "answer": "An **SLA** is the formal contract. An **SLO** (Service Level Objective) is a specific, measurable goal within the SLA, such as 99.9% uptime. An **SLI** (Service Level Indicator) is a metric used to measure performance against the SLO, such as the actual uptime percentage.",
+    "sources": [
+      {
+        "name": "Google Cloud: SLIs, SLOs, and SLAs",
+        "source": "https://cloud.google.com/blog/products/management-tools/sre-fundamentals-slis-slos-and-slas"
+      },
+      {
+        "name": "Datadog: SLIs, SLOs, and SLAs: a simple guide",
+        "source": "https://www.datadoghq.com/blog/slo-and-sla/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Service Level Objectives (SLOs)",
+        "link": "https://sre.google/sre-book/service-level-agreements/"
+      },
+      {
+        "name": "Service Level Indicators (SLIs)",
+        "link": "https://sre.google/sre-book/service-level-agreements/"
+      },
+      {
+        "name": "Error budgets",
+        "link": "https://sre.google/sre-book/error-budgets/"
+      }
+    ]
+  },
+  {
+    "question": "What are the different types of SLAs?",
+    "answer": "The main types of SLAs are: **Customer-based** (covering all services for one customer), **Service-based** (covering one service for all customers), **Multi-level** (a layered approach with corporate, customer, and service-level agreements), and **Internal** (between departments within the same company).",
+    "sources": [
+      {
+        "name": "Salesforce: What Is an SLA? And Why Are They So Important?",
+        "source": "https://www.salesforce.com/resources/articles/key-components-of-an-sla/"
+      },
+      {
+        "name": "Atlassian: The ultimate guide to service level agreements",
+        "source": "https://www.atlassian.com/itsm/service-level-management/what-is-an-sla"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Internal SLAs and their importance",
+        "link": "https://www.bmc.com/blogs/internal-sla-what-it-is/"
+      },
+      {
+        "name": "Difference between customer-based and service-based SLAs",
+        "link": "https://it.toolbox.com/articles/types-of-sla-customer-based-vs-service-based-120516"
+      }
+    ]
+  },
+  {
+    "question": "Why are SLAs important for both service providers and customers?",
+    "answer": "For service providers, an SLA helps manage expectations and provides a clear basis for accountability. For customers, it guarantees a certain level of service, gives them recourse if that level isn't met, and minimizes the risk of service degradation.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education: What is a service-level agreement (SLA)?",
+        "source": "https://www.ibm.com/topics/service-level-agreement"
+      },
+      {
+        "name": "Google Cloud: What is a Service Level Agreement?",
+        "source": "https://cloud.google.com/learn/what-is-a-service-level-agreement"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "The role of SLAs in IT outsourcing",
+        "link": "https://www.accenture.com/us-en/insights/cloud/cloud-governance-service-level-agreements"
+      },
+      {
+        "name": "Negotiating a good SLA",
+        "link": "https://www.forbes.com/sites/forbestechcouncil/2021/04/16/negotiating-a-good-sla-13-things-to-know/?sh=3d1f0c2a5c53"
+      }
+    ]
+  }
+]

@@ -1,0 +1,266 @@
+[
+  {
+    "question": "What is a function?",
+    "answer": "A function is a block of organized, reusable code that performs a single, related action. It can accept inputs (parameters), perform a task, and optionally return a value.",
+    "sources": [
+      {
+        "name": "Python Functions",
+        "source": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+      },
+      {
+        "name": "Functions in JavaScript",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Function Scope",
+        "source": "https://www.freecodecamp.org/news/javascript-scope-tutorial-global-local-and-block-scope-with-var-let-and-const/"
+      },
+      {
+        "name": "Pure Functions",
+        "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+      }
+    ]
+  },
+  {
+    "question": "What is a method?",
+    "answer": "A method is a function that is associated with an object or a class. It represents a behavior or action that an object can perform and has access to the object's internal data (properties).",
+    "sources": [
+      {
+        "name": "Methods in Python",
+        "source": "https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes"
+      },
+      {
+        "name": "OOP in JavaScript",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_methods"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "The 'self' or 'this' keyword",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
+      },
+      {
+        "name": "Class Methods vs. Instance Methods",
+        "source": "https://docs.python.org/3/library/functions.html#classmethod"
+      }
+    ]
+  },
+  {
+    "question": "What is a variable?",
+    "answer": "A variable is a named storage location in memory that holds a value. The value stored in a variable can be changed during the execution of a program.",
+    "sources": [
+      {
+        "name": "Variables in JavaScript",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables"
+      },
+      {
+        "name": "Python Variables",
+        "source": "https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Variable Scope",
+        "source": "https://www.freecodecamp.org/news/javascript-scope-tutorial-global-local-and-block-scope-with-var-let-and-const/"
+      },
+      {
+        "name": "Data Types",
+        "source": "https://www.w3schools.com/js/js_datatypes.asp"
+      }
+    ]
+  },
+  {
+    "question": "What is a parameter vs. an argument?",
+    "answer": "A parameter is a variable defined in a function's declaration, acting as a placeholder. An argument is the actual value passed to the function when it is called.",
+    "sources": [
+      {
+        "name": "MDN Web Docs on Parameters and Arguments",
+        "source": "https://developer.mozilla.org/en-US/docs/Glossary/Parameter"
+      },
+      {
+        "name": "Java Documentation on Arguments and Parameters",
+        "source": "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Rest Parameters",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+      },
+      {
+        "name": "Default Parameters",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"
+      }
+    ]
+  },
+  {
+    "question": "What is a class?",
+    "answer": "A class is a blueprint or a template for creating objects. It defines the structure (attributes/properties) and behavior (methods) that all objects of that class will have.",
+    "sources": [
+      {
+        "name": "Introduction to Classes in Python",
+        "source": "https://docs.python.org/3/tutorial/classes.html"
+      },
+      {
+        "name": "Classes in JavaScript",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Constructors",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor"
+      },
+      {
+        "name": "Static Methods",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static"
+      }
+    ]
+  },
+  {
+    "question": "What is an object?",
+    "answer": "An object is an instance of a class. It is a self-contained unit that bundles together data (attributes) and behavior (methods) into a single entity.",
+    "sources": [
+      {
+        "name": "OOP with objects in IBM Documentation",
+        "source": "https://www.ibm.com/topics/object-oriented-programming"
+      },
+      {
+        "name": "Objects in Java",
+        "source": "https://www.geeksforgeeks.org/object-in-java/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Object Prototype",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+      },
+      {
+        "name": "Encapsulation",
+        "source": "https://www.geeksforgeeks.org/encapsulation-in-java/"
+      }
+    ]
+  },
+  {
+    "question": "What is an array?",
+    "answer": "An array is a data structure used to store a collection of elements of the same data type. It stores elements in a contiguous memory block and allows access via a numerical index.",
+    "sources": [
+      {
+        "name": "Arrays in JavaScript",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+      },
+      {
+        "name": "Arrays in C++",
+        "source": "https://www.geeksforgeeks.org/arrays-in-c/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Array vs. List",
+        "source": "https://www.geeksforgeeks.org/difference-between-list-and-array-in-python/"
+      },
+      {
+        "name": "Time Complexity of Array Operations",
+        "source": "https://www.freecodecamp.org/news/data-structures-101-linked-lists-arrays-and-more-a7d18721469e/"
+      }
+    ]
+  },
+  {
+    "question": "What is object destructuring?",
+    "answer": "Object destructuring is a syntax that allows you to unpack properties from an object into distinct variables. It provides a more concise way to extract and assign values from objects.",
+    "sources": [
+      {
+        "name": "Destructuring assignment in MDN Web Docs",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring"
+      },
+      {
+        "name": "FreeCodeCamp article on Destructuring",
+        "source": "https://www.freecodecamp.org/news/how-to-use-object-destructuring-in-javascript/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Array Destructuring",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring"
+      },
+      {
+        "name": "Rest Parameters",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+      }
+    ]
+  },
+  {
+    "question": "What is Encapsulation?",
+    "answer": "Encapsulation is an OOP principle that bundles an object's data (attributes) and methods together, hiding the internal implementation details from the outside world. It helps protect data integrity.",
+    "sources": [
+      {
+        "name": "Encapsulation in Java",
+        "source": "https://www.geeksforgeeks.org/encapsulation-in-java/"
+      },
+      {
+        "name": "IBM Documentation on OOP Principles",
+        "source": "https://www.ibm.com/topics/object-oriented-programming"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Access Modifiers (public, private, protected)",
+        "source": "https://www.geeksforgeeks.org/access-modifiers-in-java/"
+      },
+      {
+        "name": "Getters and Setters",
+        "source": "https://www.geeksforgeeks.org/getters-and-setters-in-java/"
+      }
+    ]
+  },
+  {
+    "question": "What is Inheritance?",
+    "answer": "Inheritance is an OOP principle where a new class (subclass or child class) inherits properties and methods from an existing class (superclass or parent class). It promotes code reuse and creates a hierarchy.",
+    "sources": [
+      {
+        "name": "Inheritance in Python",
+        "source": "https://docs.python.org/3/tutorial/classes.html#inheritance"
+      },
+      {
+        "name": "Inheritance in Java",
+        "source": "https://www.w3schools.com/java/java_inheritance.asp"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Method Overriding",
+        "source": "https://www.geeksforgeeks.org/overriding-in-java/"
+      },
+      {
+        "name": "Polymorphism",
+        "source": "https://www.ibm.com/topics/object-oriented-programming"
+      }
+    ]
+  },
+  {
+    "question": "What is Polymorphism?",
+    "answer": "Polymorphism is an OOP principle that allows a single method to behave differently depending on the object it is called on. It means 'many forms' and is often achieved through method overriding.",
+    "sources": [
+      {
+        "name": "Polymorphism in Java",
+        "source": "https://www.geeksforgeeks.org/polymorphism-in-java/"
+      },
+      {
+        "name": "A guide to Polymorphism in JavaScript",
+        "source": "https://www.freecodecamp.org/news/polymorphism-in-javascript/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Method Overloading vs. Overriding",
+        "source": "https://www.geeksforgeeks.org/method-overloading-vs-method-overriding-in-java/"
+      },
+      {
+        "name": "Abstract Classes and Interfaces",
+        "source": "https://www.geeksforgeeks.org/abstract-class-in-java/"
+      }
+    ]
+  }
+]

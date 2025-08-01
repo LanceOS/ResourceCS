@@ -1,0 +1,222 @@
+[
+  {
+    "question": "What are hyperparameters in machine learning?",
+    "answer": "Hyperparameters are external configuration settings for a machine learning model. Their values are set by the user *before* the training process begins and are not learned from the data. They control aspects like how the model learns, its architecture, and its complexity.",
+    "sources": [
+      {
+        "name": "Google Developers: Hyperparameter",
+        "source": "https://developers.google.com/machine-learning/glossary#hyperparameter"
+      },
+      {
+        "name": "Towards Data Science: Hyperparameters and How to Tune Them",
+        "source": "https://towardsdatascience.com/hyperparameters-and-how-to-tune-them-599185a4a9b2"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Hyperparameter Tuning (Grid Search, Random Search, Bayesian Optimization)",
+        "source": "https://developers.google.com/machine-learning/crash-course/running-and-debugging-ml-models/hyperparameter-tuning"
+      },
+      {
+        "topic": "Difference between Hyperparameters and Model Parameters",
+        "source": "https://www.ibm.com/topics/hyperparameters"
+      }
+    ]
+  },
+  {
+    "question": "What is the difference between a hyperparameter and a model parameter?",
+    "answer": "A **hyperparameter** is an external configuration set by the user before training (e.g., learning rate, number of layers). A **model parameter** (or 'weight' or 'bias') is an internal value that is learned and adjusted by the model during the training process to minimize error.",
+    "sources": [
+      {
+        "name": "IBM: What are Hyperparameters?",
+        "source": "https://www.ibm.com/topics/hyperparameters"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Model weights",
+        "source": "https://developers.google.com/machine-learning/glossary#weight"
+      },
+      {
+        "topic": "Model biases",
+        "source": "https://developers.google.com/machine-learning/glossary#bias"
+      },
+      {
+        "topic": "Learning rate",
+        "source": "https://towardsdatascience.com/understanding-learning-rates-in-machine-learning-d6c19f56e9c9"
+      }
+    ]
+  },
+  {
+    "question": "What are model 'weights' in a neural network?",
+    "answer": "Weights are numerical parameters that represent the strength of the connection between two neurons. They determine how much influence the output of one neuron has on the input of the next. During training, weights are adjusted to optimize the model's performance.",
+    "sources": [
+      {
+        "name": "Google Developers: Weight",
+        "source": "https://developers.google.com/machine-learning/glossary#weight"
+      },
+      {
+        "name": "Towards Data Science: Weights and Biases in Neural Networks",
+        "source": "https://towardsdatascience.com/weights-and-biases-in-neural-networks-4172f3e46c76"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Model biases",
+        "source": "https://developers.google.com/machine-learning/glossary#bias"
+      },
+      {
+        "topic": "Backpropagation",
+        "source": "https://cs231n.github.io/optimization-2/"
+      },
+      {
+        "topic": "Gradient descent",
+        "source": "https://builtin.com/data-science/gradient-descent"
+      },
+      {
+        "topic": "Loss function",
+        "source": "https://developers.google.com/machine-learning/glossary#loss"
+      }
+    ]
+  },
+  {
+    "question": "What is the role of a 'bias' in a neural network neuron?",
+    "answer": "A bias is a numerical parameter added to the weighted sum of inputs for a neuron. It acts as an offset or threshold, making it easier or harder for the neuron to activate. It provides the model with more flexibility to fit complex data patterns that don't pass through the origin.",
+    "sources": [
+      {
+        "name": "Google Developers: Bias",
+        "source": "https://developers.google.com/machine-learning/glossary#bias"
+      },
+      {
+        "name": "Simplilearn: Weights and Bias in Neural Network",
+        "source": "https://www.simplilearn.com/tutorials/deep-learning-tutorial/weights-and-bias-in-neural-network"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Activation functions",
+        "source": "https://developers.google.com/machine-learning/crash-course/neural-nets-with-tensorflow/activation-functions"
+      },
+      {
+        "topic": "Weighted sum",
+        "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+      },
+      {
+        "topic": "Loss function",
+        "source": "https://developers.google.com/machine-learning/glossary#loss"
+      }
+    ]
+  },
+  {
+    "question": "How are weights and biases determined in a neural network?",
+    "answer": "Weights and biases are determined through the training process. They are typically initialized to small random values. The network then uses a process of **forward pass**, **loss calculation**, and **backpropagation** to iteratively adjust these values using an optimizer (like gradient descent) to minimize the prediction error.",
+    "sources": [
+      {
+        "name": "Built In: Backpropagation in Neural Networks",
+        "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+      },
+      {
+        "name": "Jeremy Jordan: Training Neural Networks",
+        "source": "https://www.jeremyjordan.me/neural-networks-training/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Backpropagation",
+        "source": "https://cs231n.github.io/optimization-2/"
+      },
+      {
+        "topic": "Gradient descent",
+        "source": "https://builtin.com/data-science/gradient-descent"
+      },
+      {
+        "topic": "Optimizer",
+        "source": "https://cs231n.github.io/neural-networks-3/#update"
+      },
+      {
+        "topic": "Loss function",
+        "source": "https://developers.google.com/machine-learning/glossary#loss"
+      },
+      {
+        "topic": "Learning rate",
+        "source": "https://towardsdatascience.com/understanding-learning-rates-in-machine-learning-d6c19f56e9c9"
+      }
+    ]
+  },
+  {
+    "question": "Describe the flow of a signal through a single neuron.",
+    "answer": "An input signal from the previous layer is multiplied by its corresponding weight. The neuron sums all such weighted inputs and then adds its bias. This combined value is passed through an activation function, which determines the neuron's final output. This output then becomes an input for neurons in the next layer.",
+    "sources": [
+      {
+        "name": "YouTube: How a neuron works (by 3Blue1Brown)",
+        "source": "https://www.youtube.com/watch?v=aircAruvnKk"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Weighted sum",
+        "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+      },
+      {
+        "topic": "Pre-activation (net input)",
+        "source": "https://developers.google.com/machine-learning/glossary#preactivation"
+      },
+      {
+        "topic": "Activation function",
+        "source": "https://developers.google.com/machine-learning/crash-course/neural-nets-with-tensorflow/activation-functions"
+      }
+    ]
+  },
+  {
+    "question": "How does an output layer of a neural network make a final prediction for a classification task?",
+    "answer": "For multi-class classification, the output layer typically uses the **Softmax** activation function. This function takes the raw outputs (logits) of each neuron and transforms them into a probability distribution. The class corresponding to the highest probability in this distribution is chosen as the final prediction. For binary classification, a **Sigmoid** function is often used, with a threshold (e.g., > 0.5) to determine the class.",
+    "sources": [
+      {
+        "name": "IBM: What is the Softmax function?",
+        "source": "https://www.ibm.com/topics/softmax-function"
+      },
+      {
+        "name": "Towards Data Science: Activation Functions in Neural Networks",
+        "source": "https://towardsdatascience.com/activation-functions-in-neural-networks-94916a847e33"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Softmax activation function",
+        "source": "https://deeplearning.ai/ai-notes/basics-of-softmax/"
+      },
+      {
+        "topic": "Sigmoid activation function",
+        "source": "https://machinelearningmastery.com/sigmoid-activation-function-for-deep-learning/"
+      },
+      {
+        "topic": "Logits",
+        "source": "https://developers.google.com/machine-learning/glossary#logit"
+      },
+      {
+        "topic": "Probability distribution",
+        "source": "https://www.ibm.com/topics/probability-distribution"
+      }
+    ]
+  },
+  {
+    "question": "How does an output layer of a neural network make a final prediction for a regression task?",
+    "answer": "For regression tasks, the output layer typically has a single neuron with a **linear activation function** (or no activation function). This allows the neuron to output any real number. The final output value is directly taken as the model's prediction for the continuous variable (e.g., price, temperature).",
+    "sources": [
+      {
+        "name": "Towards Data Science: Activation Functions",
+        "source": "https://towardsdatascience.com/activation-functions-in-neural-networks-94916a847e33"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Regression vs. Classification",
+        "source": "https://developers.google.com/machine-learning/crash-course/classification/regression-vs-classification"
+      },
+      {
+        "topic": "Linear activation function",
+        "source": "https://medium.com/@shahbaz.ahmad/linear-activation-function-14f7b2f6764"
+      }
+    ]
+  }
+]

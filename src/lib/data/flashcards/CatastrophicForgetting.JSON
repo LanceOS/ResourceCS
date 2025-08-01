@@ -1,0 +1,186 @@
+[
+  {
+    "question": "What is catastrophic forgetting in machine learning?",
+    "answer": "Catastrophic forgetting, or catastrophic interference, is the phenomenon where a neural network forgets previously learned information upon learning new, sequential tasks. This occurs because the model's weights and biases are updated to accommodate the new task, often overwriting the parameters that were crucial for the old tasks.",
+    "sources": [
+      {
+        "name": "DeepMind: Protecting the Past with Elastic Weight Consolidation",
+        "source": "https://deepmind.google/2017/04/13/protecting-the-past-with-elastic-weight-consolidation/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Sequential learning",
+        "source": "https://developer.nvidia.com/blog/deep-learning-nutshell-sequence-learning/"
+      },
+      {
+        "topic": "Lifelong learning",
+        "source": "https://www.cs.uic.edu/~liub/lifelong-machine-learning-draft.pdf"
+      },
+      {
+        "topic": "Continual learning",
+        "source": "https://www.ibm.com/think/topics/continual-learning"
+      }
+    ]
+  },
+  {
+    "question": "Does catastrophic forgetting happen because weights and biases decrease over time?",
+    "answer": "No, catastrophic forgetting is not a passive process of decay. It is an active process of 'overwriting' old knowledge, driven by the learning algorithm's singular focus on minimizing the loss for the new task. The updates made to the model's parameters to learn the new task can inadvertently erase the knowledge from previous tasks.",
+    "sources": [
+      {
+        "name": "Scientific Reports on Catastrophic Forgetting",
+        "source": "https://www.nature.com/articles/s41598-020-79828-x"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Gradient descent",
+        "source": "https://ai.stanford.edu/~optas/data/stanford_qual_exams.pdf"
+      },
+      {
+        "topic": "Overfitting",
+        "source": "https://www.superannotate.com/blog/overfitting-and-underfitting-in-machine-learning"
+      },
+      {
+        "topic": "Bias-variance trade-off",
+        "source": "https://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/lecturenote12.html"
+      }
+    ]
+  },
+  {
+    "question": "What are some techniques used to mitigate catastrophic forgetting?",
+    "answer": "Researchers use several techniques, including: 1. **Elastic Weight Consolidation (EWC)**, which protects important weights from previous tasks. 2. **Rehearsal/Experience Replay**, which involves re-training the model on a small subset of old data. 3. **Learning without Forgetting (LwF)**, which uses the old model to generate 'soft targets' to guide the training of the new model. 4. **Architectural methods** that add new neurons for each new task.",
+    "sources": [
+      {
+        "name": "Elastic Weight Consolidation Research Paper (ArXiv)",
+        "source": "https://arxiv.org/abs/1612.00796"
+      },
+      {
+        "name": "Learning without Forgetting Research Paper (ArXiv)",
+        "source": "https://arxiv.org/abs/1403.4901"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Regularization",
+        "source": "https://www.ibm.com/topics/regularization"
+      },
+      {
+        "topic": "Online learning",
+        "source": "https://en.wikipedia.org/wiki/Online_machine_learning"
+      }
+    ]
+  },
+  {
+    "question": "What is the primary purpose of regularization in machine learning?",
+    "answer": "Regularization is a set of techniques used to prevent overfitting and improve the generalization ability of a machine learning model. It works by adding a penalty to the model's loss function for increased complexity, thus discouraging the model from learning the noise in the training data.",
+    "sources": [
+      {
+        "name": "IBM: What is Regularization?",
+        "source": "https://www.ibm.com/topics/regularization"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Overfitting vs. Underfitting",
+        "source": "https://www.superannotate.com/blog/overfitting-and-underfitting-in-machine-learning"
+      },
+      {
+        "topic": "Generalization",
+        "source": "https://vitalflux.com/model-complexity-overfitting-in-machine-learning/"
+      },
+      {
+        "topic": "Bias-variance trade-off",
+        "source": "https://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/lecturenote12.html"
+      }
+    ]
+  },
+  {
+    "question": "Explain the difference between L1 and L2 regularization.",
+    "answer": "L1 (Lasso) regularization adds a penalty based on the sum of the absolute values of the weights ($$\\lambda \\sum |w_i|$$). It can force some weights to become exactly zero, leading to a sparse model and performing implicit feature selection. L2 (Ridge) regularization adds a penalty based on the sum of the squared values of the weights ($$\\lambda \\sum w_i^2$$). It encourages weights to be small but non-zero, making it effective for handling multicollinearity.",
+    "sources": [
+      {
+        "name": "Scikit-learn: Ridge Regression",
+        "source": "https://scikit-learn.org/stable/modules/linear_model.html#ridge-regression"
+      },
+      {
+        "name": "Scikit-learn: Lasso",
+        "source": "https://scikit-learn.org/stable/modules/linear_model.html#lasso"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Feature selection",
+        "source": "https://www.ibm.com/think/topics/feature-selection"
+      },
+      {
+        "topic": "Multicollinearity",
+        "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4888898/"
+      },
+      {
+        "topic": "Weight decay",
+        "source": "https://towardsdatascience.com/weight-decay-and-its-peculiar-effects-66e0aee3e7b8/"
+      }
+    ]
+  },
+  {
+    "question": "How does Dropout regularization work?",
+    "answer": "Dropout is a regularization technique for neural networks. During each training step, it randomly 'drops out' (sets to zero) a fraction of the neurons in a layer. This prevents neurons from becoming too co-dependent and forces the network to learn more robust features that are not reliant on any single neuron, effectively training an ensemble of thinned networks.",
+    "sources": [
+      {
+        "name": "JMLR: Dropout Research Paper",
+        "source": "https://www.jmlr.org/papers/volume15/srivastava14a/srivastava14a.pdf"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Neural network architecture",
+        "source": "https://aws.amazon.com/compare/the-difference-between-deep-learning-and-neural-networks/"
+      },
+      {
+        "topic": "Ensemble learning",
+        "source": "https://www.v7labs.com/blog/ensemble-learning-guide"
+      }
+    ]
+  },
+  {
+    "question": "What is the bias-variance trade-off and how does it relate to regularization?",
+    "answer": "The bias-variance trade-off describes the relationship between a model's bias (error due to overly simplistic assumptions) and its variance (sensitivity to fluctuations in the training data). A model with high variance and low bias is overfit. Regularization works by intentionally increasing a model's bias slightly (by constraining its parameters) to significantly reduce its variance, leading to a better-generalized model.",
+    "sources": [
+      {
+        "name": "Cornell University: Bias-Variance Tradeoff Notes",
+        "source": "https://www.cs.cornell.edu/courses/cs4780/2015fa/web/lecturenotes/lecturenote12.html"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Model complexity",
+        "source": "https://vitalflux.com/model-complexity-overfitting-in-machine-learning/"
+      },
+      {
+        "topic": "Mean Squared Error (MSE)",
+        "source": "https://www.britannica.com/science/mean-squared-error"
+      }
+    ]
+  },
+  {
+    "question": "What is data augmentation and how does it prevent overfitting?",
+    "answer": "Data augmentation is a regularization technique that artificially increases the size and diversity of a training dataset by applying random transformations (e.g., rotations, flips, scaling) to the existing data. By exposing the model to a wider variety of examples, it becomes more robust and less likely to overfit to the specific, limited examples in the original training set.",
+    "sources": [
+      {
+        "name": "Data Augmentation Research Paper (ArXiv)",
+        "source": "https://arxiv.org/abs/1912.04611"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Computer vision",
+        "source": "https://explorecourses.stanford.edu/search?view=catalog&filter-coursestatus-Active=on&q=CS+231A"
+      },
+      {
+        "topic": "Generative models",
+        "source": "https://www.ibm.com/think/topics/generative-model"
+      }
+    ]
+  }
+]

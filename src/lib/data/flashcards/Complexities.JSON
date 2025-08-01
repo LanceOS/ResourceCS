@@ -1,0 +1,169 @@
+[
+  {
+    "question": "What is time complexity?",
+    "answer": "Time complexity is a measure of how the running time of an algorithm grows as the size of its input, denoted by 'n', increases. It is an asymptotic measure of an algorithm's efficiency, typically expressed using Big O notation, which describes the worst-case scenario.",
+    "sources": [
+      {
+        "name": "Big-O Notation: Time and Space Complexity",
+        "source": "https://www.ibm.com/topics/big-o-notation"
+      },
+      {
+        "name": "Introduction to Algorithms and Data Structures",
+        "source": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-1-introduction-to-algorithms/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Big O, Big Omega, and Big Theta Notation",
+        "link": "https://www.geeksforgeeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+      }
+    ]
+  },
+  {
+    "question": "What are the common types of time complexities and their examples?",
+    "answer": "The most common time complexities, from most efficient to least efficient, are:\n\n- O(1) Constant Time: The running time is constant, regardless of input size. Example: Accessing an element in an array by its index.\n\n- O(log n) Logarithmic Time: The running time grows logarithmically with the input size. Example: Binary search in a sorted array.\n\n- O(n) Linear Time: The running time grows linearly with the input size. Example: A simple loop that iterates through every element of an array once.\n\n- O(n log n) Log-linear Time: The running time grows as a product of linear and logarithmic factors. Example: Efficient sorting algorithms like Merge Sort and Quicksort.\n\n- O(n^2) Quadratic Time: The running time grows quadratically with the input size. Example: Nested loops, such as in Bubble Sort or Insertion Sort.\n\n- O(2^n) Exponential Time: The running time doubles with each additional element. Example: Naive recursive calculation of the Fibonacci sequence.",
+    "sources": [
+      {
+        "name": "Time and Space Complexity: A Beginner's Guide",
+        "source": "https://medium.com/@pnandhiniofficial/time-and-space-complexity-a-beginners-guide-88d617d29d01"
+      },
+      {
+        "name": "Big-O Algorithm Complexity Cheat Sheet",
+        "source": "https://www.bigocheatsheet.com/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Master Theorem for Recurrence Relations",
+        "link": "https://www.geeksforgeeks.org/master-theorem-for-divide-and-conquer-recurrences/"
+      }
+    ]
+  },
+  {
+    "question": "How is time complexity calculated?",
+    "answer": "Time complexity is calculated by analyzing an algorithm's code and counting the number of 'elementary operations' as a function of the input size 'n'. This function is then simplified using Big O notation by dropping constant factors and lower-order terms. The analysis involves examining control structures like loops, conditionals, and nested code.",
+    "sources": [
+      {
+        "name": "How to Calculate Time Complexity?",
+        "source": "https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/"
+      },
+      {
+        "name": "Time Complexity Analysis of Algorithms",
+        "source": "https://www.cs.princeton.edu/courses/archive/fall10/cos226/lectures/01-AnalysisOfAlgorithms.pdf"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Master Theorem for Recurrence Relations",
+        "link": "https://www.geeksforgeeks.org/master-theorem-for-divide-and-conquer-recurrences/"
+      }
+    ]
+  },
+  {
+    "question": "What does the 'n' in time and space complexity represent?",
+    "answer": "The 'n' represents the **size of the input**, not the input value itself. For an array or list, 'n' is the number of elements. For a tree, it might be the number of nodes. It is the variable that represents the scale of the problem and drives the growth of the algorithm's resource usage.",
+    "sources": [
+      {
+        "name": "Big-O, Big-Omega, Big-Theta",
+        "source": "https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/analysis/big-o.html"
+      }
+    ],
+    "additional_topics": []
+  },
+  {
+    "question": "What does the 'O' in Big O notation stand for, and what does it represent?",
+    "answer": "The 'O' stands for 'Order of,' as in 'order of growth.' Big O notation represents the upper bound on the growth rate of a function. It describes the worst-case scenario of an algorithm's performance, focusing on the dominant term of the complexity function and ignoring constant factors and lower-order terms.",
+    "sources": [
+      {
+        "name": "What is Big O Notation?",
+        "source": "https://www.freecodecamp.org/news/a-gentle-introduction-to-big-o-notation/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Amortized Analysis",
+        "link": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-model-of-computation-and-review-of-asymptotic-notation/"
+      }
+    ]
+  },
+  {
+    "question": "What is space complexity and how is it different from time complexity?",
+    "answer": "Space complexity measures how the memory required by an algorithm grows as the input size 'n' increases. It is similar to time complexity in that it uses Big O notation, but it measures memory usage instead of running time. It focuses on the auxiliary space—the extra memory used by the algorithm beyond the input itself.",
+    "sources": [
+      {
+        "name": "Time and Space Complexity in Data Structures",
+        "source": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"
+      }
+    ],
+    "additional_topics": []
+  },
+  {
+    "question": "What are the common types of space complexities and their examples?",
+    "answer": "The most common space complexities, from most efficient to least efficient, are:\n\n- O(1) Constant Space: The algorithm uses a fixed amount of memory regardless of input size. Example: A function that calculates the sum of an array's elements using a single variable to store the total.\n\n- O(n) Linear Space: The memory usage grows linearly with the input size. Example: An algorithm that creates a new array of the same size as the input array.\n\n- O(n^2) Quadratic Space: The memory usage grows quadratically with the input size. Example: An algorithm that creates a 2D matrix of size n x n.",
+    "sources": [
+      {
+        "name": "Mastering Algorithm Complexity",
+        "source": "https://daily.dev/blog/mastering-algorithm-complexity-time-and-space-optimization"
+      },
+      {
+        "name": "Space Complexity",
+        "source": "https://en.wikipedia.org/wiki/Space_complexity"
+      }
+    ],
+    "additional_topics": []
+  },
+  {
+    "question": "Why are time and space complexity important for programmers?",
+    "answer": "Complexity analysis is crucial for predicting the performance and scalability of code, especially with large datasets. It allows programmers to make informed design decisions by understanding the trade-offs between time and space, choose the most efficient data structures and algorithms, and identify bottlenecks for optimization. It is a fundamental skill for writing robust and scalable software.",
+    "sources": [
+      {
+        "name": "Why is Big O Important?",
+        "source": "https://builtin.com/software-engineering-perspectives/big-o-notation-important"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "The P versus NP Problem",
+        "link": "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+      }
+    ]
+  },
+  {
+    "question": "How can a programmer recognize inefficient code?",
+    "answer": "A programmer can recognize inefficient code by looking for common patterns such as nested loops ($O(n^2)$), poor choice of data structures for specific operations (e.g., linear search on a large list), repeated calculations within loops, and naive recursive solutions without memoization. Thinking about how the number of operations grows with the input size is key.",
+    "sources": [
+      {
+        "name": "How to Find the Time Complexity of an Algorithm",
+        "source": "https://towardsdatascience.com/how-to-find-the-time-complexity-of-an-algorithm-d5c2293427f7"
+      }
+    ],
+    "additional_topics": []
+  },
+  {
+    "question": "What is a naive algorithm?",
+    "answer": "A naive algorithm is a straightforward, brute-force approach to solving a problem. It's often the simplest and most direct solution, but typically lacks efficiency because it checks every possible combination or solution. While simple and correct, naive algorithms are often a starting point for developing more optimized and complex solutions.",
+    "sources": [
+      {
+        "name": "What are Brute-Force Algorithms?",
+        "source": "https://www.geeksforgeeks.org/brute-force-algorithm-simple-explanation/"
+      }
+    ],
+    "additional_topics": []
+  },
+  {
+    "question": "What is a heuristic?",
+    "answer": "A heuristic is a 'rule of thumb' or a mental shortcut used in an algorithm to find a good-enough solution quickly, especially when a perfectly optimal solution is too computationally expensive. It sacrifices the guarantee of finding the best answer for the sake of speed and practicality, using an informed guess to guide its search.",
+    "sources": [
+      {
+        "name": "Heuristic Search: What It Is & How It Works",
+        "source": "https://www.techopedia.com/definition/31513/heuristic-search"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "A* Search Algorithm",
+        "link": "https://www.redblobgames.com/pathfinding/a-star/introduction.html"
+      }
+    ]
+  }
+]

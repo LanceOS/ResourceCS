@@ -1,0 +1,142 @@
+[
+  {
+    "question": "What is server provisioning?",
+    "answer": "Server provisioning is the process of setting up a physical or virtual server with all the necessary resources and configurations to perform its intended function. This includes installing the operating system, software, and security measures, and configuring network and storage settings.",
+    "sources": [
+      {
+        "name": "Server Provisioning: The Definitive Guide",
+        "source": "https://www.ibm.com/topics/server-provisioning"
+      },
+      {
+        "name": "What is server provisioning?",
+        "source": "https://www.redhat.com/en/topics/automation/what-is-server-provisioning"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Infrastructure as Code (IaC)",
+        "source": "https://aws.amazon.com/what-is/iac/"
+      }
+    ]
+  },
+  {
+    "question": "Why would you want horizontally scaled servers to be stateless?",
+    "answer": "Stateless servers are essential for horizontal scaling because they do not store session-specific data on the server itself. This allows any server instance behind a load balancer to handle any request, which improves scalability, fault tolerance, and resilience. If a server fails, its state is not lost because it's stored externally, and other servers can seamlessly take over.",
+    "sources": [
+      {
+        "name": "Stateful vs. Stateless Applications",
+        "source": "https://cloud.google.com/architecture/application-development/stateful-vs-stateless-applications"
+      },
+      {
+        "name": "The Twelve-Factor App: I. Codebase",
+        "source": "https://12factor.net/state"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Load Balancing Algorithms",
+        "source": "https://www.nginx.com/resources/glossary/load-balancing-algorithms/"
+      },
+      {
+        "topic": "Session Affinity (Sticky Sessions)",
+        "source": "https://www.f5.com/services/resources/glossary/session-affinity"
+      }
+    ]
+  },
+  {
+    "question": "What is server redundancy?",
+    "answer": "Server redundancy is the practice of having duplicate or backup servers that can take over the functions of a primary server in case of failure. Its purpose is to eliminate single points of failure, minimize downtime, and ensure high availability and data protection.",
+    "sources": [
+      {
+        "name": "Server Redundancy",
+        "source": "https://www.ibm.com/topics/server-redundancy"
+      },
+      {
+        "name": "High Availability and Redundancy",
+        "source": "https://aws.amazon.com/what-is/high-availability/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Fault Tolerance",
+        "source": "https://www.ibm.com/topics/fault-tolerance"
+      },
+      {
+        "topic": "Single Point of Failure (SPOF)",
+        "source": "https://www.cloudflare.com/learning/high-availability/what-is-a-single-point-of-failure-spof/"
+      }
+    ]
+  },
+  {
+    "question": "What is the difference between active-passive and active-active server redundancy?",
+    "answer": "In an **active-passive** setup, one server handles all requests while a standby server remains idle, ready to take over in case of a failure (failover). In an **active-active** setup, all servers are actively processing requests, with a load balancer distributing traffic among them. Active-active provides better resource utilization and scalability.",
+    "sources": [
+      {
+        "name": "Active-Active vs. Active-Passive Clustering",
+        "source": "https://www.starwindsoftware.com/blog/active-active-vs-active-passive-clustering"
+      },
+      {
+        "name": "High-Availability Architectures",
+        "source": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-dr-architecture/high-availability-architectures.html"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Load Balancing",
+        "source": "https://cloud.google.com/load-balancing/docs/load-balancing-overview"
+      }
+    ]
+  },
+  {
+    "question": "What are the four main failover system types?",
+    "answer": "The four main types are: **Cold Standby**, where the backup system is offline; **Warm Standby**, where it is partially running and receives periodic updates; **Hot Standby (Active-Passive)**, where a fully operational, synchronized backup is ready for immediate failover; and **Active-Active**, where all systems are running and serving requests simultaneously.",
+    "sources": [
+      {
+        "name": "Disaster Recovery RTO and RPO",
+        "source": "https://www.vmware.com/topics/glossary/content/recovery-time-objective-rto.html"
+      },
+      {
+        "name": "Failover in a distributed system",
+        "source": "https://aws.amazon.com/what-is/failover/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Recovery Time Objective (RTO)",
+        "source": "https://www.ibm.com/topics/rto"
+      },
+      {
+        "topic": "Recovery Point Objective (RPO)",
+        "source": "https://www.ibm.com/topics/rpo"
+      },
+      {
+        "topic": "Disaster Recovery",
+        "source": "https://www.cloudflare.com/learning/business/what-is-disaster-recovery/"
+      }
+    ]
+  },
+  {
+    "question": "What is the CAP Theorem and why is it important for distributed system design?",
+    "answer": "The CAP Theorem states that a distributed system can only guarantee two out of the three properties: **Consistency**, **Availability**, and **Partition Tolerance**. This forces developers to make trade-offs, such as choosing between strong consistency and high availability during a network partition, which is fundamental to system architecture.",
+    "sources": [
+      {
+        "name": "Brewer's CAP Theorem",
+        "source": "https://www.geeksforgeeks.org/cap-theorem/"
+      },
+      {
+        "name": "CAP Theorem",
+        "source": "https://robertgreiner.com/cap-theorem-and-distributed-database-design/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Data Consistency Models",
+        "source": "https://cloud.google.com/spanner/docs/reference/consistency"
+      },
+      {
+        "topic": "Microservices Architecture",
+        "source": "https://aws.amazon.com/microservices/"
+      }
+    ]
+  }
+]

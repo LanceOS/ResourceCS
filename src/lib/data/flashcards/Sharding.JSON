@@ -1,0 +1,254 @@
+[
+  {
+    "question": "What is database sharding?",
+    "answer": "Database sharding is a method for horizontally partitioning a large database into smaller, more manageable parts called 'shards.' Each shard is an independent database, and the data is distributed across these shards. The primary goal is to improve performance, scalability, and availability by distributing the workload and data storage.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education - What is Database Sharding?",
+        "source": "https://www.ibm.com/cloud/learn/database-sharding"
+      },
+      {
+        "name": "Microsoft Azure - Sharding pattern",
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding"
+      },
+      {
+        "name": "AWS - Sharding strategies",
+        "source": "https://aws.amazon.com/builders-library/sharding-strategies-for-distributed-systems/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Horizontal vs. Vertical Partitioning",
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#partitioning-strategies"
+      },
+      {
+        "topic": "Consistent Hashing",
+        "source": "https://www.toptal.com/big-data/consistent-hashing"
+      }
+    ]
+  },
+  {
+    "question": "How does Apache Cassandra relate to database sharding?",
+    "answer": "Apache Cassandra is a NoSQL, distributed database that inherently uses sharding (partitioning) as a core part of its architecture. It does not 'add' sharding as a feature; it is fundamentally designed to distribute data across a cluster of nodes using consistent hashing. The 'partition key' in a Cassandra data model determines which node stores the data, ensuring high availability and linear scalability.",
+    "sources": [
+      {
+        "name": "Apache Cassandra Official Documentation - The Partitioner",
+        "source": "https://cassandra.apache.org/doc/latest/architecture/partitioner.html"
+      },
+      {
+        "name": "DataStax Academy - Cassandra Partitioning",
+        "source": "https://www.datastax.com/learn/cassandra-basics/cassandra-partitioning"
+      },
+      {
+        "name": "Baeldung - Cassandra Architecture",
+        "source": "https://www.baeldung.com/cassandra-architecture"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Consistent Hashing",
+        "source": "https://www.toptal.com/big-data/consistent-hashing"
+      },
+      {
+        "topic": "NoSQL vs. SQL databases",
+        "source": "https://www.mongodb.com/nosql-explained/nosql-vs-sql"
+      }
+    ]
+  },
+  {
+    "question": "What is denormalization and why is it used?",
+    "answer": "Denormalization is a database optimization technique that involves intentionally adding redundant data to a previously normalized database. The main purpose is to improve read performance by reducing the number of complex 'JOIN' operations required to retrieve data. This is often done for read-heavy applications, reporting, and data warehousing, at the cost of increased storage space and potential data consistency challenges.",
+    "sources": [
+      {
+        "name": "Wikipedia - Denormalization",
+        "source": "https://en.wikipedia.org/wiki/Denormalization"
+      },
+      {
+        "name": "InfluxData - Database Denormalization",
+        "source": "https://www.influxdata.com/glossary/database-denormalization/"
+      },
+      {
+        "name": "Oracle Blog - Denormalization for Performance",
+        "source": "https://blogs.oracle.com/sql/post/denormalization-for-performance"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Database Normalization",
+        "source": "https://www.geeksforgeeks.org/database-normalization-in-dbms/"
+      },
+      {
+        "topic": "ETL vs. ELT",
+        "source": "https://www.stitchdata.com/resources/etl-vs-elt/"
+      }
+    ]
+  },
+  {
+    "question": "What is a data lake?",
+    "answer": "A data lake is a centralized repository that stores a massive amount of data in its raw, native format. It can hold structured, semi-structured, and unstructured data. Unlike a data warehouse which requires a predefined schema, a data lake uses a 'schema-on-read' approach, allowing for immense flexibility and supporting advanced analytics, machine learning, and real-time processing.",
+    "sources": [
+      {
+        "name": "AWS - What is a Data Lake?",
+        "source": "https://aws.amazon.com/big-data/datalakes-and-analytics/what-is-a-data-lake/"
+      },
+      {
+        "name": "Microsoft Azure - Data Lake",
+        "source": "https://azure.microsoft.com/en-us/solutions/data-lake/"
+      },
+      {
+        "name": "Google Cloud - Data Lakes, Warehouses, and Lakehouses",
+        "source": "https://cloud.google.com/learn/data-lakes-vs-data-warehouses"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Data Warehouse vs. Data Lake",
+        "source": "https://www.ibm.com/cloud/blog/data-lake-vs-data-warehouse"
+      },
+      {
+        "topic": "The Data Lakehouse Architecture",
+        "source": "https://databricks.com/discover/data-lakehouse"
+      }
+    ]
+  },
+  {
+    "question": "How does Amazon Glue relate to data lakes?",
+    "answer": "Amazon Glue is a serverless data integration service that is integral to an AWS-based data lake. It provides a managed 'Data Catalog' to automatically discover and store metadata about the data in the lake. It also offers a serverless ETL (Extract, Transform, Load) engine for cleaning, transforming, and preparing the raw data for analysis. Glue essentially acts as the metadata and processing backbone for the data lake.",
+    "sources": [
+      {
+        "name": "AWS - What is AWS Glue?",
+        "source": "https://aws.amazon.com/glue/"
+      },
+      {
+        "name": "AWS - Building a Data Lake on AWS",
+        "source": "https://docs.aws.amazon.com/whitepapers/latest/building-data-lake/aws-glue.html"
+      },
+      {
+        "name": "CloudAcademy - What is AWS Glue?",
+        "source": "https://cloudacademy.com/blog/what-is-aws-glue/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "ETL vs. ELT",
+        "source": "https://www.stitchdata.com/resources/etl-vs-elt/"
+      },
+      {
+        "topic": "AWS Lake Formation",
+        "source": "https://aws.amazon.com/lake-formation/"
+      }
+    ]
+  },
+  {
+    "question": "What is Apache Hadoop?",
+    "answer": "Apache Hadoop is an open-source framework for storing and processing massive datasets across a cluster of commodity computers. It consists of two main components: HDFS (Hadoop Distributed File System) for fault-tolerant storage, and YARN (Yet Another Resource Negotiator) for managing resources and scheduling jobs. Hadoop enables cost-effective, scalable, and parallel big data processing.",
+    "sources": [
+      {
+        "name": "Apache Hadoop Official Website",
+        "source": "https://hadoop.apache.org/"
+      },
+      {
+        "name": "Hortonworks (now Cloudera) - What is Hadoop?",
+        "source": "https://www.cloudera.com/what-is-hadoop.html"
+      },
+      {
+        "name": "IBM - What is Apache Hadoop?",
+        "source": "https://www.ibm.com/topics/hadoop"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Hadoop vs. Spark",
+        "source": "https://www.datacamp.com/blog/hadoop-vs-spark"
+      },
+      {
+        "topic": "The Hadoop Ecosystem",
+        "source": "https://www.javatpoint.com/hadoop-ecosystem"
+      }
+    ]
+  },
+  {
+    "question": "What are the core components of Apache Hadoop?",
+    "answer": "The core components of Hadoop are: 1. HDFS (Hadoop Distributed File System) for distributed and fault-tolerant data storage. 2. YARN (Yet Another Resource Negotiator) for resource management and job scheduling. 3. MapReduce, the original processing engine for parallel data processing. Hadoop Common provides the necessary utilities for the other modules.",
+    "sources": [
+      {
+        "name": "Apache Hadoop - Core Components Explained",
+        "source": "https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/core-default.xml"
+      },
+      {
+        "name": "Oracle - Hadoop Components",
+        "source": "https://docs.oracle.com/cd/E52345_01/html/E52352/hadcomponents.html"
+      },
+      {
+        "name": "GeeksforGeeks - Core Components of Hadoop",
+        "source": "https://www.geeksforgeeks.org/core-components-of-hadoop/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "HDFS Fault Tolerance",
+        "source": "https://data-flair.training/blogs/hdfs-fault-tolerance-in-hadoop/"
+      },
+      {
+        "topic": "MapReduce programming model",
+        "source": "https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html"
+      }
+    ]
+  },
+  {
+    "question": "What is Apache Spark and how does it relate to Hadoop?",
+    "answer": "Apache Spark is a lightning-fast, general-purpose processing engine for big data. It is often run on a Hadoop cluster, using YARN for resource management and HDFS for storage. Spark's key advantage over Hadoop's original MapReduce is its ability to perform in-memory processing, which makes it significantly faster for a wide range of workloads, including iterative algorithms, real-time analytics, and machine learning.",
+    "sources": [
+      {
+        "name": "Apache Spark Official Website",
+        "source": "https://spark.apache.org/"
+      },
+      {
+        "name": "DataCamp - Hadoop vs. Spark",
+        "source": "https://www.datacamp.com/blog/hadoop-vs-spark"
+      },
+      {
+        "name": "Databricks - Apache Spark on Hadoop",
+        "source": "https://databricks.com/glossary/apache-spark-hadoop"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "In-memory processing",
+        "source": "https://www.ibm.com/topics/in-memory-computing"
+      },
+      {
+        "topic": "Real-time data streaming",
+        "source": "https://www.splunk.com/en_us/data-insider/what-is-real-time-data-streaming.html"
+      }
+    ]
+  },
+  {
+    "question": "What is the difference between a data lake and a data warehouse?",
+    "answer": "A data lake stores all data in its raw, native format, using a 'schema-on-read' approach, and is best for advanced analytics, machine learning, and flexible data exploration. A data warehouse stores cleaned, structured, and transformed data in a specific format, using a 'schema-on-write' approach, and is optimized for business intelligence, reporting, and structured analysis.",
+    "sources": [
+      {
+        "name": "Amazon AWS - Data Lake vs. Data Warehouse",
+        "source": "https://aws.amazon.com/big-data/datalakes-and-analytics/data-lake-vs-data-warehouse/"
+      },
+      {
+        "name": "IBM Cloud Education - Data Lake vs. Data Warehouse",
+        "source": "https://www.ibm.com/cloud/blog/data-lake-vs-data-warehouse"
+      },
+      {
+        "name": "Snowflake - Data Lake vs Data Warehouse",
+        "source": "https://www.snowflake.com/guides/data-lake-vs-data-warehouse"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Schema-on-read vs. Schema-on-write",
+        "source": "https://www.datanami.com/2015/05/27/data-warehousing-vs-data-lakes-the-battle-of-schema-on-write-vs-schema-on-read/"
+      },
+      {
+        "topic": "OLAP vs. OLTP",
+        "source": "https://www.geeksforgeeks.org/olap-vs-oltp/"
+      }
+    ]
+  }
+]
