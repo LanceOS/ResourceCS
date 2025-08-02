@@ -1,22 +1,48 @@
 <script lang="ts">
 	import { InfoCategories } from '$lib';
-	import Nav from '$lib/components/Nav.svelte';
+	import Icon from '@iconify/svelte';
+
 	import { onMount } from 'svelte';
 
 	let topics: string[] = $state(['']);
+	let topicMenu: string = $state('');
+
+	const openTopic = (topic: string) => {
+		if (topicMenu === topic) {
+			topicMenu = '';
+		} else {
+			topicMenu = topic;
+		}
+	};
 
 	onMount(async () => {
 		topics = await InfoCategories.getCategories();
 	});
 </script>
 
-<main class="flex flex-col gap-6 h-screen max-w-6xl mx-auto py-16">
-	<h1 class="text-xl font-bold sm:text-6xl border-b">Study Software Topics</h1>
-	<div class="flex flex-col gap-4 overflow-y-scroll">
+<main class="mx-auto flex h-screen max-w-6xl flex-col gap-6 py-16">
+	<h1 class="border-b text-xl font-bold sm:text-6xl">Study Software Topics</h1>
+	<section class="flex flex-col gap-4 overflow-y-scroll">
 		{#if topics}
 			{#each topics as topic}
-                <a href={`/${topic}/flashcards`} class="text-xl h-screen py-2 px-4 border shadow-sm duration-200">{topic}</a>
-            {/each}
+				<div class="border py-2 px-4 space-y-6 duration-200">
+					<button
+						class="w-full flex cursor-pointer items-center justify-between hover:pr-2 duration-200"
+						onclick={() => openTopic(topic)}
+					>
+						<span class="text-xl">{topic} </span>
+						<Icon
+							icon="ep:arrow-left"
+							class={`duration-200 ${topic === topicMenu ? '-rotate-90' : ''}`}
+						/>
+					</button>
+					{#if topicMenu === topic}
+						<div>
+							<p>Test</p>
+						</div>
+					{/if}
+				</div>
+			{/each}
 		{/if}
-	</div>
+	</section>
 </main>
