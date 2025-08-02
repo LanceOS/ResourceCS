@@ -218,5 +218,65 @@
         "source": "https://medium.com/@shahbaz.ahmad/linear-activation-function-14f7b2f6764"
       }
     ]
+  },
+  {
+    "question": "What is the learning rate hyperparameter?",
+    "answer": "The **learning rate** is a hyperparameter that controls how much the model's weights and biases are adjusted with respect to the loss gradient during training. A **small** learning rate can lead to slow training, but a **large** learning rate can cause the model to overshoot the optimal solution, resulting in unstable training or divergence. Choosing an appropriate learning rate is a critical step in training a neural network.",
+    "sources": [
+      {
+        "name": "IBM: Learning Rate",
+        "source": "https://www.ibm.com/topics/learning-rate"
+      },
+      {
+        "name": "DeepLearning.AI: Learning Rate",
+        "source": "https://www.deeplearning.ai/ai-notes/learning-rate/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Gradient descent",
+        "source": "https://builtin.com/data-science/gradient-descent"
+      },
+      {
+        "topic": "Optimizer algorithms (e.g., Adam, SGD, RMSprop)",
+        "source": "https://cs231n.github.io/neural-networks-3/#update"
+      },
+      {
+        "topic": "Loss function",
+        "source": "https://developers.google.com/machine-learning/glossary#loss"
+      }
+    ]
+  },
+  {
+    "question": "What is the batch size hyperparameter?",
+    "answer": "The **batch size** is the number of training examples utilized in one iteration of training. It is a hyperparameter that controls the trade-off between the accuracy of the gradient estimate and the speed of computation. A **large** batch size provides a more accurate estimate of the gradient, but requires more memory and can lead to slower training. A **small** batch size trains faster and can lead to better generalization, but the gradient estimate is less stable.",
+    "sources": [
+      {
+        "name": "Google Developers: Batch Size",
+        "source": "https://developers.google.com/machine-learning/glossary#batch-size"
+      },
+      {
+        "name": "NVIDIA: Large Batch Training of Neural Networks",
+        "source": "https://developer.nvidia.com/blog/large-batch-training-neural-networks/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Gradient descent",
+        "source": "https://builtin.com/data-science/gradient-descent"
+      },
+      {
+        "topic": "Stochastic gradient descent (SGD)",
+        "source": "https://builtin.com/machine-learning/stochastic-gradient-descent"
+      },
+      {
+        "topic": "Mini-batch gradient descent",
+        "source": "https://www.ibm.com/topics/mini-batch-gradient-descent"
+      },
+      {
+        "topic": "GPU memory management",
+        "source": "https://pytorch.org/docs/stable/notes/cuda.html"
+      }
+    ]
   }
 ]

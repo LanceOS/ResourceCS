@@ -1,0 +1,203 @@
+[
+  {
+    "topic": "Polymorphism",
+    "summary": {
+      "title": "A Deep Dive into Polymorphism",
+      "body": "In object-oriented programming, **polymorphism** is the ability of an object to take on many forms. Its name comes from the Greek words 'poly' (many) and 'morph' (form). This powerful concept allows objects of different classes to be treated as objects of a common superclass. This means that a single interface can be used to represent different underlying data types or classes. The primary benefit of polymorphism is that it enables developers to write generic, flexible, and reusable code. This makes it easier to extend and maintain programs, as new object types can be added without having to change existing code that uses the polymorphic interface. ",
+      "sources": [
+        {
+          "name": "IBM: What is Polymorphism?",
+          "source": "https://www.ibm.com/topics/polymorphism"
+        },
+        {
+          "name": "Oracle: The Java Tutorials - Polymorphism",
+          "source": "https://docs.oracle.com/javase/tutorial/java/oop/polymorphism.html"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Method Overriding",
+          "source": "https://en.wikipedia.org/wiki/Method_overriding"
+        },
+        {
+          "name": "Method Overloading",
+          "source": "https://en.wikipedia.org/wiki/Function_overloading"
+        },
+        {
+          "name": "Inheritance",
+          "source": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+        },
+        {
+          "name": "Dynamic Dispatch",
+          "source": "https://en.wikipedia.org/wiki/Dynamic_dispatch"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Types of Polymorphism",
+    "summary": {
+      "title": "A Deep Dive into the Types of Polymorphism",
+      "body": "Polymorphism can be categorized into two main types based on when the program determines which method to call: **compile-time polymorphism** and **run-time polymorphism**.\n\n* **Compile-time Polymorphism** (or static polymorphism) is resolved during the compilation phase of the program. The compiler knows exactly which method to call based on the number and type of arguments. A common way to achieve this is through **method overloading**, where multiple methods in a class have the same name but different parameter lists.\n\n* **Run-time Polymorphism** (or dynamic polymorphism) is resolved during the program's execution. The program determines which method to call based on the actual object type at runtime, not the reference type. This is primarily achieved through **method overriding**, which requires an inheritance hierarchy where a subclass provides its own specific implementation of a method that is already defined in its superclass. ",
+      "sources": [
+        {
+          "name": "GeeksforGeeks: Compile-time vs. Run-time Polymorphism",
+          "source": "https://www.geeksforgeeks.org/cpp/compile-time-vs-run-time-polymorphism-difference-in-cpp/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Compile-time vs. Run-time",
+          "source": "https://www.geeksforgeeks.org/cpp/compile-time-vs-run-time-polymorphism-difference-in-cpp/"
+        },
+        {
+          "name": "Method Overloading",
+          "source": "https://en.wikipedia.org/wiki/Function_overloading"
+        },
+        {
+          "name": "Method Overriding",
+          "source": "https://en.wikipedia.org/wiki/Method_overriding"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Method Overloading",
+    "summary": {
+      "title": "A Deep Dive into Method Overloading",
+      "body": "**Method overloading** is a form of compile-time polymorphism where a class can have multiple methods with the exact same name, but with different **parameter lists**. The parameter list can differ in the number of arguments, the data types of the arguments, or the order of the arguments. The compiler analyzes the method call and the arguments provided to determine which specific version of the method to execute. For example, a `Calculator` class could have an `add(int a, int b)` method for adding two integers and an `add(int a, int b, int c)` method for adding three integers. This feature improves code readability and allows for a more intuitive interface where a single name can handle similar operations on different types or amounts of data. ",
+      "sources": [
+        {
+          "name": "Javatpoint: Method Overloading",
+          "source": "https://www.javatpoint.com/method-overloading-in-java"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Compile-time Polymorphism",
+          "source": "https://www.geeksforgeeks.org/cpp/compile-time-vs-run-time-polymorphism-difference-in-cpp/"
+        },
+        {
+          "name": "Method Signatures",
+          "source": "https://www.scaler.com/topics/method-signature-in-java/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Method Overriding",
+    "summary": {
+      "title": "A Deep Dive into Method Overriding",
+      "body": "**Method overriding** is a form of run-time polymorphism. It occurs when a subclass provides a specific implementation for a method that is already defined in its superclass. To be considered an override, the method in the subclass must have the exact same name, parameters, and return type as the method in the superclass. A classic example involves an `Animal` superclass with a generic `speak()` method. Subclasses like `Dog` and `Cat` can then override this method to provide their own specific implementations, such as `speak()` returning 'Woof!' for a `Dog` object and 'Meow!' for a `Cat` object. When a `Dog` object is referenced by an `Animal` type, the correct `Dog.speak()` method is called at runtime. ",
+      "sources": [
+        {
+          "name": "GeeksforGeeks: Method Overriding",
+          "source": "https://www.geeksforgeeks.org/method-overriding-in-java/"
+        },
+        {
+          "name": "Python Tutorial: Method Overriding",
+          "source": "https://www.pythontutorial.net/python-oop/python-method-overriding/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Run-time Polymorphism",
+          "source": "https://www.geeksforgeeks.org/cpp/compile-time-vs-run-time-polymorphism-difference-in-cpp/"
+        },
+        {
+          "name": "Inheritance",
+          "source": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+        },
+        {
+          "name": "Base/Super Class",
+          "source": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+        },
+        {
+          "name": "Derived/Sub Class",
+          "source": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Polymorphism vs. Conditional Logic",
+    "summary": {
+      "title": "A Deep Dive into Polymorphism vs. Conditional Logic",
+      "body": "Polymorphism and conditional logic (e.g., `if/else` statements) can both be used to achieve different behaviors, but they do so in fundamentally different ways. Conditional logic handles different behaviors by using explicit checks within a single function. For example, a function might check an object's type with an `if` statement to decide which code block to execute. This approach can become cumbersome and hard to maintain as more object types are added, as it requires modifying the existing function. **Polymorphism**, in contrast, delegates the logic to the specific object type itself through **method overriding**. A single method call can produce different results based on the object's type, without any explicit checks. This is a more extensible approach because adding a new class simply requires overriding the method, and the existing code that calls the method remains unchanged. ",
+      "sources": [
+        {
+          "name": "Microsoft Docs: Polymorphism in C#",
+          "source": "https://docs.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/polymorphism"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Method Overriding",
+          "source": "https://en.wikipedia.org/wiki/Method_overriding"
+        },
+        {
+          "name": "Extensibility",
+          "source": "https://www.ibm.com/garage/method/practices/learn/extensibility-overview/"
+        },
+        {
+          "name": "Code Maintainability",
+          "source": "https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/extensibility"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Benefits of Polymorphism",
+    "summary": {
+      "title": "A Deep Dive into the Benefits of Polymorphism",
+      "body": "The primary benefit of polymorphism is that it enables the creation of **flexible and reusable code**. By allowing a single interface to interact with multiple types of objects, it frees the programmer from having to write type-specific code. This promotes writing generic algorithms that can operate on a collection of different objects, as long as they share a common interface. As a result, code becomes easier to **extend** and **maintain**. When a new class is introduced, it can simply be added to the inheritance hierarchy and provide its own implementation of the polymorphic methods. The existing code that uses the common interface can then work with this new class seamlessly without any modification. This also reduces the **coupling** between different parts of the program, making the overall system more robust and easier to manage. ",
+      "sources": [
+        {
+          "name": "Javatpoint: Benefits of Polymorphism",
+          "source": "https://www.javatpoint.com/what-is-the-benefit-of-polymorphism-in-java"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Inheritance",
+          "source": "https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+        },
+        {
+          "name": "Code Reusability",
+          "source": "https://www.qodo.ai/glossary/code-reusability/"
+        },
+        {
+          "name": "Decoupling",
+          "source": "https://www.ibm.com/topics/loose-coupling"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Inheritance and Polymorphism",
+    "summary": {
+      "title": "A Deep Dive into the Role of Inheritance in Polymorphism",
+      "body": "Inheritance and polymorphism are deeply intertwined, with inheritance providing the essential foundation for run-time polymorphism. Inheritance establishes a relationship between a **superclass** and its **subclasses**, defining a common interface or contract (e.g., a method signature). The subclasses then inherit this contract. To achieve polymorphism, each subclass can then **override** the inherited method to provide its own unique implementation. Polymorphism is the mechanism that allows a program to treat these different subclass objects as their common superclass type. When a method is called on a superclass reference that points to a subclass object, the correct overridden method from the subclass is executed at runtime. This seamless dispatch of the correct method is a core aspect of polymorphism and is made possible by the hierarchical structure provided by inheritance. ",
+      "sources": [
+        {
+          "name": "TutorialsPoint: Java Inheritance",
+          "source": "https://www.tutorialspoint.com/java/java_inheritance.htm"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Method Overriding",
+          "source": "https://en.wikipedia.org/wiki/Method_overriding"
+        },
+        {
+          "name": "Abstract Classes",
+          "source": "https://www.ibm.com/docs/en/zos/2.4.0?topic=only-abstract-classes-c"
+        },
+        {
+          "name": "Interface",
+          "source": "https://en.wikipedia.org/wiki/Interface_(object-oriented_programming)"
+        }
+      ]
+    }
+  }
+]

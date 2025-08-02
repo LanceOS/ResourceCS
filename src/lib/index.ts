@@ -1,1 +1,8 @@
-// place files you want to import through the `$lib` alias in this folder.
+import { acidjson } from "./data/flashcards/ACID.json"
+
+const ACID = acidjson;
+
+
+export const CardCategories = {
+    getCategories
+}

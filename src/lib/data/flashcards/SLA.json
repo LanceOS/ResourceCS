@@ -126,5 +126,33 @@
         "link": "https://www.forbes.com/sites/forbestechcouncil/2021/04/16/negotiating-a-good-sla-13-things-to-know/?sh=3d1f0c2a5c53"
       }
     ]
+  },
+  {
+    "question": "How would a hypothetical cloud provider's SLA for uptime look?",
+    "answer": "A cloud provider's SLA might guarantee **99.9% uptime** for a service (**SLO**). If the actual uptime (**SLI**) for a given month falls to 99.8%, the provider has breached the SLA. The SLA's penalty clause would then kick in, entitling the customer to a **service credit**—for example, a 10% discount on their bill for that month. This process ensures the provider is held accountable for not meeting their promised service level.",
+    "sources": [
+      {
+        "name": "AWS: Service Level Agreements",
+        "source": "https://aws.amazon.com/compute/sla/"
+      },
+      {
+        "name": "Microsoft Azure: Service Level Agreements",
+        "source": "https://azure.microsoft.com/en-us/support/legal/sla/"
+      },
+      {
+        "name": "Google Cloud: Compute Engine Service Level Agreement",
+        "source": "https://cloud.google.com/compute/sla"
+      }
+    ],
+    "additional_topics": [
+      {
+        "name": "Service Credits",
+        "link": "https://cloud.google.com/terms/service-credits"
+      },
+      {
+        "name": "Uptime vs. Availability",
+        "link": "https://www.cloudflare.com/learning/performance/what-is-uptime/"
+      }
+    ]
   }
 ]

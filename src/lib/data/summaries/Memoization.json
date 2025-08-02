@@ -1,0 +1,180 @@
+[
+  {
+    "topic": "Memoization",
+    "summary": {
+      "title": "A Deep Dive into Memoization",
+      "body": "Memoization is a powerful optimization technique used in programming to significantly speed up the execution of functions. It works by **caching** the results of 'expensive' function calls, which are functions that take a long time to compute. When a memoized function is called with a specific set of inputs, it first checks if it has already computed a result for those same inputs. If the result is found in its cache, it immediately returns the stored value instead of re-computing it. This is a form of a **time-space trade-off**, where you use extra memory (space) to store results in order to save computation time. Memoization is most effective for **pure functions**, which always produce the same output for the same input and have no side effects. This ensures that the cached result is always correct and up-to-date. ",
+      "sources": [
+        {
+          "name": "GeeksforGeeks: Memoization 101",
+          "source": "https://www.geeksforgeeks.org/memoization-101-what-it-is-and-why-you-should-use-it/"
+        },
+        {
+          "name": "freeCodeCamp: What is memoization?",
+          "source": "https://www.freecodecamp.org/news/what-is-memoization-in-javascript/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Dynamic Programming",
+          "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        },
+        {
+          "name": "Time-Space Tradeoff",
+          "source": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
+        },
+        {
+          "name": "Idempotence",
+          "source": "https://aws.amazon.com/builders-library/idempotency/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Memoization trade-offs",
+    "summary": {
+      "title": "A Deep Dive into the Trade-Offs of Memoization",
+      "body": "The primary trade-off of using memoization is the classic **time-space trade-off**. By its very nature, memoization seeks to reduce the time it takes for a function to execute by avoiding redundant computations. It achieves this by storing the results of previous function calls in a cache. This caching, however, comes at a cost: it requires extra memory (space). The more results that are cached, the more memory is consumed. For functions with a large number of possible inputs, the cache can grow very large, potentially leading to increased memory usage that could be undesirable. Therefore, a programmer must consider whether the gain in execution speed is worth the increase in memory consumption. Memoization is most beneficial when the computation is very expensive and the function is called with the same inputs frequently. ",
+      "sources": [
+        {
+          "name": "SitePoint: Understanding Memoization",
+          "source": "https://www.sitepoint.com/understanding-memoization-and-how-to-use-it-in-javascript/"
+        },
+        {
+          "name": "Wikipedia: Space–time tradeoff",
+          "source": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Time-Space Tradeoff",
+          "source": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
+        },
+        {
+          "name": "Big O Notation (Time and Space Complexity)",
+          "source": "https://www.ibm.com/topics/big-o-notation"
+        },
+        {
+          "name": "Dynamic Programming",
+          "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Memoization vs. Caching",
+    "summary": {
+      "title": "A Deep Dive into Memoization vs. Caching",
+      "body": "While often used interchangeably, memoization and caching are not the same thing. **Memoization** is a highly specific optimization technique that applies only to functions. It's a form of in-memory caching where the storage is directly tied to the function's inputs and outputs. The key characteristic of memoization is that it's a structural part of the function itself, used to avoid re-calculating results for a specific set of arguments. **Caching**, on the other hand, is a much broader concept. It can involve storing any kind of data from various sources, such as a database, a web server, or a remote API. The purpose is to avoid a slow lookup or retrieval process. Caches can be implemented in various layers of a system (e.g., CPU cache, browser cache, database cache) and are not limited to function calls. In short, memoization is a particular type of caching, but not all caching is memoization. ",
+      "sources": [
+        {
+          "name": "Medium: Memoization vs. Caching",
+          "source": "https://medium.com/@brianmclaws/caching-vs-memoization-a-beginners-guide-7a2ef39d883b"
+        },
+        {
+          "name": "AWS: What is caching?",
+          "source": "https://aws.amazon.com/caching/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Cache Invalidation",
+          "source": "https://en.wikipedia.org/wiki/Cache_invalidation"
+        },
+        {
+          "name": "Pure Functions",
+          "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Functions for memoization",
+    "summary": {
+      "title": "A Deep Dive into Functions Best Suited for Memoization",
+      "body": "Memoization is not suitable for all functions. It is most effective when applied to **pure functions**. A pure function is defined by two key properties:\n\n1.  **Determinism**: For a given input, it will always return the exact same output. The function's result is solely determined by its input parameters.\n2.  **No Side Effects**: It does not modify any state or data outside of its own scope. This means it doesn't change global variables, write to files, or make network requests.\n\nMemoization relies entirely on the function's **idempotency**, which is the property of a function returning the same result for the same input. If a function's output can change for the same input (i.e., it is not pure), then caching the result would lead to incorrect behavior. Therefore, a function that relies on external state, randomness, or I/O operations is a poor candidate for memoization. ",
+      "sources": [
+        {
+          "name": "DigitalOcean: Idempotent Functions and Memoization",
+          "source": "https://www.digitalocean.com/community/tutorials/what-is-memoization"
+        },
+        {
+          "name": "Mozilla: Pure Functions",
+          "source": "https://developer.mozilla.org/en-US/docs/Glossary/Pure_function"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Pure Functions",
+          "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+        },
+        {
+          "name": "Side Effects in Programming",
+          "source": "https://en.wikipedia.org/wiki/Side_effect_(computer_science)"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Practical memoization example",
+    "summary": {
+      "title": "A Deep Dive into a Practical Memoization Example",
+      "body": "To understand memoization in practice, consider a function, `slow_square(n)`, that squares a number but simulates a computationally expensive process. \n\n**Without memoization**, if you call `slow_square(5)` multiple times, the function will re-calculate the value each time, causing a delay. The calls would look like this:\n1. `slow_square(5)` -> `computes 5 * 5` -> returns `25`\n2. `slow_square(5)` -> `computes 5 * 5` -> returns `25`\n\n**With memoization**, the function maintains a cache (e.g., a dictionary). The first time it's called with `slow_square(5)`, it computes the result (25), stores it in the cache (`cache[5] = 25`), and returns it. For all subsequent calls with the same input, it will bypass the expensive computation entirely and instantly return the value from the cache. The calls would look like this:\n1. `slow_square(5)` -> `computes 5 * 5`, `stores 25` -> returns `25`\n2. `slow_square(5)` -> `checks cache`, `finds 25` -> returns `25`\n\nThis demonstrates how memoization can drastically improve performance for functions that are called repeatedly with the same arguments.",
+      "sources": [
+        {
+          "name": "Medium: An Easy Example of Memoization",
+          "source": "https://medium.com/@albert.banaag/memoization-made-simple-31742460d3d5"
+        },
+        {
+          "name": "Real Python: Memoization in Python",
+          "source": "https://realpython.com/python-memoization/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Dynamic Programming",
+          "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        },
+        {
+          "name": "Time Complexity",
+          "source": "https://www.ibm.com/topics/big-o-notation"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Memoization and the Fibonacci sequence",
+    "summary": {
+      "title": "A Deep Dive into Memoization and the Fibonacci Sequence",
+      "body": "The recursive calculation of the Fibonacci sequence is a classic example of where memoization provides a massive performance improvement. A naive recursive implementation, `fib(n) = fib(n-1) + fib(n-2)`, suffers from an **exponential time complexity ($$O(2^n)$$)** because it repeatedly calculates the same Fibonacci numbers over and over. For example, `fib(5)` requires `fib(4)` and `fib(3)`, and `fib(4)` also requires `fib(3)` and `fib(2)`, leading to many redundant calculations.\n\nMemoization solves this by creating a cache (e.g., a dictionary or array). The memoized `fib(n)` function first checks if `fib(n)` is already in the cache. If it is, the value is returned instantly in $$O(1)$$ time. If not, the function computes the value, stores it in the cache, and then returns it. This ensures that each Fibonacci number is only computed once. By eliminating all the redundant computations, the time complexity is reduced from an exponential $$O(2^n)$$ to a highly efficient **linear $$O(n)$$**. This demonstrates how memoization is a foundational concept in **dynamic programming** for solving problems with overlapping subproblems. ",
+      "sources": [
+        {
+          "name": "GeeksforGeeks: Dynamic Programming vs. Memoization",
+          "source": "https://www.geeksforgeeks.org/memoization-vs-dynamic-programming/"
+        },
+        {
+          "name": "Real Python: Memoization in Python",
+          "source": "https://realpython.com/python-memoization/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Dynamic Programming",
+          "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        },
+        {
+          "name": "Time Complexity",
+          "source": "https://www.ibm.com/topics/big-o-notation"
+        },
+        {
+          "name": "Recursive Algorithms",
+          "source": "https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/"
+        },
+        {
+          "name": "Tail Recursion Optimization",
+          "source": "https://www.geeksforgeeks.org/tail-recursion-tutorial/"
+        }
+      ]
+    }
+  }
+]

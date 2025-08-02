@@ -14,12 +14,12 @@
     ],
     "additional_topics": [
       {
-        "name": "Function Scope",
-        "source": "https://www.freecodecamp.org/news/javascript-scope-tutorial-global-local-and-block-scope-with-var-let-and-const/"
+        "topic": "Function Scope",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures"
       },
       {
-        "name": "Pure Functions",
-        "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+        "topic": "Pure Functions",
+        "source": "https://www.ibm.com/docs/en/ads/24.0.1?topic=annotations-pure-functions"
       }
     ]
   },
@@ -38,12 +38,12 @@
     ],
     "additional_topics": [
       {
-        "name": "The 'self' or 'this' keyword",
-        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this"
+        "topic": "The 'self' or 'this' keyword",
+        "source": "https://www.geeksforgeeks.org/php/what-is-the-difference-between-self-and-this/"
       },
       {
-        "name": "Class Methods vs. Instance Methods",
-        "source": "https://docs.python.org/3/library/functions.html#classmethod"
+        "topic": "Class Methods vs. Instance Methods",
+        "source": "https://realpython.com/instance-class-and-static-methods-demystified/"
       }
     ]
   },
@@ -62,11 +62,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Variable Scope",
+        "topic": "Variable Scope",
         "source": "https://www.freecodecamp.org/news/javascript-scope-tutorial-global-local-and-block-scope-with-var-let-and-const/"
       },
       {
-        "name": "Data Types",
+        "topic": "Data Types",
         "source": "https://www.w3schools.com/js/js_datatypes.asp"
       }
     ]
@@ -86,11 +86,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Rest Parameters",
+        "topic": "Rest Parameters",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
       },
       {
-        "name": "Default Parameters",
+        "topic": "Default Parameters",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"
       }
     ]
@@ -110,11 +110,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Constructors",
+        "topic": "Constructors",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor"
       },
       {
-        "name": "Static Methods",
+        "topic": "Static Methods",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static"
       }
     ]
@@ -134,18 +134,18 @@
     ],
     "additional_topics": [
       {
-        "name": "Object Prototype",
-        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain"
+        "topic": "Object Prototype",
+        "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
       },
       {
-        "name": "Encapsulation",
-        "source": "https://www.geeksforgeeks.org/encapsulation-in-java/"
+        "topic": "Encapsulation",
+        "source": "https://www.sumologic.com/glossary/encapsulation"
       }
     ]
   },
   {
     "question": "What is an array?",
-    "answer": "An array is a data structure used to store a collection of elements of the same data type. It stores elements in a contiguous memory block and allows access via a numerical index.",
+    "answer": "An array is a data structure used to store a collection of elements. It stores elements in a contiguous memory block and allows access via a numerical index. While in some languages arrays are fixed in size and only hold elements of the same data type, other languages use dynamic arrays (or lists) that can change size and hold different data types.",
     "sources": [
       {
         "name": "Arrays in JavaScript",
@@ -158,11 +158,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Array vs. List",
-        "source": "https://www.geeksforgeeks.org/difference-between-list-and-array-in-python/"
+        "topic": "Array vs. List",
+        "source": "https://discuss.codecademy.com/t/what-are-some-differences-between-an-array-and-a-list/351552"
       },
       {
-        "name": "Time Complexity of Array Operations",
+        "topic": "Time Complexity of Array Operations",
         "source": "https://www.freecodecamp.org/news/data-structures-101-linked-lists-arrays-and-more-a7d18721469e/"
       }
     ]
@@ -182,11 +182,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Array Destructuring",
+        "topic": "Array Destructuring",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring"
       },
       {
-        "name": "Rest Parameters",
+        "topic": "Rest Parameters",
         "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
       }
     ]
@@ -206,12 +206,12 @@
     ],
     "additional_topics": [
       {
-        "name": "Access Modifiers (public, private, protected)",
-        "source": "https://www.geeksforgeeks.org/access-modifiers-in-java/"
+        "topic": "Access Modifiers (public, private, protected)",
+        "source": "https://www.geeksforgeeks.org/java/access-modifiers-java/"
       },
       {
-        "name": "Getters and Setters",
-        "source": "https://www.geeksforgeeks.org/getters-and-setters-in-java/"
+        "topic": "Getters and Setters",
+        "source": "https://dzone.com/articles/java-getter-and-setter-basics-common-mistakes-and"
       }
     ]
   },
@@ -230,11 +230,11 @@
     ],
     "additional_topics": [
       {
-        "name": "Method Overriding",
-        "source": "https://www.geeksforgeeks.org/overriding-in-java/"
+        "topic": "Method Overriding",
+        "source": "https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"
       },
       {
-        "name": "Polymorphism",
+        "topic": "Polymorphism",
         "source": "https://www.ibm.com/topics/object-oriented-programming"
       }
     ]
@@ -254,12 +254,64 @@
     ],
     "additional_topics": [
       {
-        "name": "Method Overloading vs. Overriding",
-        "source": "https://www.geeksforgeeks.org/method-overloading-vs-method-overriding-in-java/"
+        "topic": "Method Overloading vs. Overriding",
+        "source": "https://www.index.dev/blog/overloading-vs-overriding-java"
       },
       {
-        "name": "Abstract Classes and Interfaces",
-        "source": "https://www.geeksforgeeks.org/abstract-class-in-java/"
+        "topic": "Abstract Classes and Interfaces",
+        "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+      }
+    ]
+  },
+  {
+    "question": "What are the four main principles of Object-Oriented Programming (OOP)?",
+    "answer": "The four main principles of OOP are:\n1. **Encapsulation**: Bundling data and methods that operate on that data into a single unit, hiding the internal state from the outside.\n2. **Inheritance**: The mechanism of a new class (subclass) inheriting the properties and methods of an existing class (superclass).\n3. **Polymorphism**: The ability of a single interface (method) to be used with different underlying forms (objects).\n4. **Abstraction**: Hiding complex implementation details and showing only the essential features of an object. This is often achieved through abstract classes and interfaces.",
+    "sources": [
+      {
+        "name": "IBM: Object-Oriented Programming",
+        "source": "https://www.ibm.com/topics/object-oriented-programming"
+      },
+      {
+        "name": "GeeksforGeeks: OOPs Concepts in Java",
+        "source": "https://www.geeksforgeeks.org/object-oriented-programming-oops-concepts-in-java/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Abstract Classes and Interfaces",
+        "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+      },
+      {
+        "topic": "Design Patterns",
+        "source": "https://en.wikipedia.org/wiki/Software_design_pattern"
+      }
+    ]
+  },
+  {
+    "question": "What is Abstraction in OOP?",
+    "answer": "Abstraction is the principle of hiding the complex, underlying implementation details of an object and exposing only the essential features to the user. It allows you to create complex systems by focusing on the 'what' an object does rather than the 'how' it does it. A great analogy is a car's accelerator pedal: you press it to make the car go faster without needing to know the intricate mechanical processes happening under the hood.",
+    "sources": [
+      {
+        "name": "GeeksforGeeks: Abstraction in Java",
+        "source": "https://www.geeksforgeeks.org/abstraction-in-java/"
+      },
+      {
+        "name": "TutorialsPoint: C++ - Abstraction",
+        "source": "https://www.tutorialspoint.com/cplusplus/cpp_data_abstraction.htm"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Encapsulation vs. Abstraction",
+        "source": "https://www.sumologic.com/glossary/encapsulation"
+      },
+      {
+        "topic": "Abstract Classes and Interfaces",
+        "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+      },
+      {
+        "topic": "Design Patterns",
+        "source": "https://en.wikipedia.org/wiki/Software_design_pattern"
       }
     ]
   }

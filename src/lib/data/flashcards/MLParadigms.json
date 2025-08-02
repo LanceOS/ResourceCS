@@ -1,0 +1,226 @@
+[
+  {
+    "question": "What are the four main paradigms of machine learning?",
+    "answer": "The four main paradigms are supervised learning, unsupervised learning, reinforcement learning, and semi-supervised learning.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education - Supervised vs. Unsupervised Learning",
+        "source": "https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning"
+      },
+      {
+        "name": "Berkeley - Reinforcement Learning",
+        "source": "https://sites.google.com/berkeley.edu/reinforcement-learning/home"
+      },
+      {
+        "name": "Google Developers - Semi-supervised Learning",
+        "source": "https://developers.google.com/machine-learning/semi-supervised"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Difference between supervised and unsupervised learning",
+        "link": "https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning"
+      },
+      {
+        "topic": "How reinforcement learning works",
+        "link": "https://deepai.org/machine-learning-glossary-and-terms/reinforcement-learning"
+      }
+    ]
+  },
+  {
+    "question": "What is supervised learning?",
+    "answer": "Supervised learning is a machine learning paradigm where an algorithm learns from a training dataset that contains both input features and the correct output labels. The model's goal is to learn a mapping from the inputs to the outputs so it can make accurate predictions on new, unseen data.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education: Supervised vs Unsupervised Learning",
+        "source": "https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning"
+      },
+      {
+        "name": "Google Developers: Machine Learning Crash Course",
+        "source": "https://developers.google.com/machine-learning/crash-course/supervised-learning/super-and-unsuper"
+      },
+      {
+        "name": "Stanford University: Supervised Learning",
+        "source": "https://cs229.stanford.edu/notes2021fall/main_notes.pdf"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Training data",
+        "link": "https://developers.google.com/machine-learning/glossary#training-set"
+      },
+      {
+        "topic": "Labeled data",
+        "link": "https://developers.google.com/machine-learning/glossary#labeled-data"
+      },
+      {
+        "topic": "Regression vs. classification",
+        "link": "https://www.cs.wisc.edu/machine-learning-basics/regression-and-classification-in-machine-learning/"
+      }
+    ]
+  },
+  {
+    "question": "What is unsupervised learning?",
+    "answer": "Unsupervised learning is a machine learning paradigm that finds hidden patterns, structures, and relationships within a dataset that has no labels. The model is given only the input data and must discover its own internal representation of the data. This is often used for tasks like clustering and dimensionality reduction.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education: Supervised vs Unsupervised Learning",
+        "source": "https://www.ibm.com/cloud/blog/supervised-vs-unsupervised-learning"
+      },
+      {
+        "name": "Google Developers: Unsupervised Learning",
+        "source": "https://developers.google.com/machine-learning/glossary#unsupervised-learning"
+      },
+      {
+        "name": "Towards Data Science: A Gentle Introduction to Unsupervised Learning",
+        "source": "https://towardsdatascience.com/a-gentle-introduction-to-unsupervised-learning-7c3093284050"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Clustering",
+        "link": "https://developers.google.com/machine-learning/crash-course/clustering/basics"
+      },
+      {
+        "topic": "Dimensionality reduction",
+        "link": "https://en.wikipedia.org/wiki/Dimensionality_reduction"
+      },
+      {
+        "topic": "K-Means clustering",
+        "link": "https://www.ibm.com/topics/k-means-clustering"
+      }
+    ]
+  },
+  {
+    "question": "What is reinforcement learning?",
+    "answer": "Reinforcement learning is a machine learning paradigm in which an **agent** learns to make decisions by taking actions in an **environment** to maximize a cumulative **reward**. It learns through a process of trial and error, receiving positive rewards for good actions and penalties for bad ones. The agent is not explicitly told what to do but instead learns from its experience.",
+    "sources": [
+      {
+        "name": "Berkeley: Reinforcement Learning",
+        "source": "https://sites.google.com/berkeley.edu/reinforcement-learning/home"
+      },
+      {
+        "name": "DeepAI: Reinforcement Learning",
+        "source": "https://deepai.org/machine-learning-glossary-and-terms/reinforcement-learning"
+      },
+      {
+        "name": "Google AI Blog: A Beginner's Guide to Reinforcement Learning",
+        "source": "https://ai.googleblog.com/2021/08/a-beginners-guide-to-reinforcement.html"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Agent, environment, and reward",
+        "link": "https://www.javatpoint.com/reinforcement-learning-environment-agent"
+      },
+      {
+        "topic": "Explore-exploit trade-off",
+        "link": "https://www.ibm.com/topics/explore-exploit-trade-off"
+      },
+      {
+        "topic": "Markov decision process",
+        "link": "https://www.ibm.com/topics/markov-decision-process"
+      }
+    ]
+  },
+  {
+    "question": "What is semi-supervised learning?",
+    "answer": "Semi-supervised learning is a machine learning paradigm that combines a small amount of **labeled data** with a large amount of **unlabeled data** during training. It is often used to train models when labeling data is expensive or time-consuming, as the model can learn from the unlabeled data to improve its understanding of the problem.",
+    "sources": [
+      {
+        "name": "Google Developers: Semi-supervised Learning",
+        "source": "https://developers.google.com/machine-learning/semi-supervised"
+      },
+      {
+        "name": "IBM Cloud Education: What is Semi-supervised Learning?",
+        "source": "https://www.ibm.com/cloud/blog/what-is-semi-supervised-learning"
+      },
+      {
+        "name": "Towards Data Science: A Gentle Introduction to Semi-Supervised Learning",
+        "source": "https://towardsdatascience.com/a-gentle-introduction-to-semi-supervised-learning-7a7019d0862"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Pseudo-labeling",
+        "link": "https://www.ibm.com/topics/pseudo-labeling"
+      },
+      {
+        "topic": "Bootstrapping",
+        "link": "https://en.wikipedia.org/wiki/Bootstrapping_(statistics)"
+      },
+      {
+        "topic": "Comparison to supervised and unsupervised learning",
+        "link": "https://www.ibm.com/cloud/blog/what-is-semi-supervised-learning"
+      }
+    ]
+  },
+  {
+    "question": "What is the primary difference between regression and classification models?",
+    "answer": "Regression models predict a continuous numerical value (e.g., house price), while classification models predict a discrete categorical output (e.g., 'cat' or 'dog').",
+    "sources": [
+      {
+        "name": "University of Wisconsin-Madison - Regression vs. Classification",
+        "source": "https://www.cs.wisc.edu/machine-learning-basics/regression-and-classification-in-machine-learning/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Examples of regression problems",
+        "link": "https://developers.google.com/machine-learning/intro-to-ml/regression"
+      },
+      {
+        "topic": "Examples of classification problems",
+        "link": "https://developers.google.com/machine-learning/intro-to-ml/classification"
+      }
+    ]
+  },
+  {
+    "question": "What is the key difference between machine learning and deep learning?",
+    "answer": "Deep learning is a subfield of machine learning that specifically uses deep neural networks. Deep learning models automatically learn features from data, while traditional machine learning often requires manual feature engineering.",
+    "sources": [
+      {
+        "name": "IBM Cloud Education - Deep Learning vs. Machine Learning",
+        "source": "https://www.ibm.com/cloud/blog/deep-learning-vs-machine-learning"
+      },
+      {
+        "name": "Google AI Blog - What is the Difference Between AI, ML and Deep Learning?",
+        "source": "https://ai.googleblog.com/2022/05/what-is-difference-between-ai-ml-and.html"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Role of deep neural networks in deep learning",
+        "link": "https://www.simplilearn.com/tutorials/deep-learning-tutorial/what-is-deep-learning"
+      },
+      {
+        "topic": "Feature engineering in machine learning",
+        "link": "https://www.ibm.com/topics/feature-engineering"
+      }
+    ]
+  },
+  {
+    "question": "What is sentiment analysis?",
+    "answer": "Sentiment analysis is a branch of natural language processing (NLP) that uses machine learning to identify and quantify the emotional tone—positive, negative, or neutral—in text.",
+    "sources": [
+      {
+        "name": "Stanford University - Sentiment Analysis",
+        "source": "https://nlp.stanford.edu/sentiment/"
+      },
+      {
+        "name": "MonkeyLearn - What is Sentiment Analysis?",
+        "source": "https://monkeylearn.com/sentiment-analysis/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Natural Language Processing (NLP)",
+        "link": "https://ai.googleblog.com/2021/08/an-introduction-to-natural-language.html"
+      },
+      {
+        "topic": "Aspect-based sentiment analysis",
+        "link": "https://monkeylearn.com/blog/aspect-based-sentiment-analysis/"
+      }
+    ]
+  }
+]

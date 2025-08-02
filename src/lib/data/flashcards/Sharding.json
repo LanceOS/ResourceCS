@@ -250,5 +250,37 @@
         "source": "https://www.geeksforgeeks.org/olap-vs-oltp/"
       }
     ]
+  },
+  {
+    "question": "What are the main sharding strategies?",
+    "answer": "The three main sharding strategies are:\n1. **Range-based Sharding**: Data is partitioned based on a contiguous range of values. For example, all users with a last name from A to M might go to one shard, and N to Z on another. This is simple but can lead to hot spots if data isn't evenly distributed.\n2. **Hash-based Sharding**: A hash function is applied to the shard key (e.g., a user ID) to determine which shard the data belongs to. This ensures a more even distribution of data but makes range-based queries less efficient.\n3. **Directory-based Sharding**: A lookup table (the \"directory\") stores the mapping of a shard key to its corresponding shard. This offers the most flexibility, as it allows for dynamic re-sharding and can handle uneven data distribution, but it introduces a single point of failure at the directory level.",
+    "sources": [
+      {
+        "name": "Microsoft Azure: Sharding pattern - Partitioning Strategies",
+        "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/sharding#partitioning-strategies"
+      },
+      {
+        "name": "AWS: Sharding strategies for distributed systems",
+        "source": "https://aws.amazon.com/builders-library/sharding-strategies-for-distributed-systems/"
+      },
+      {
+        "name": "MongoDB: Sharding Keys",
+        "source": "https://www.mongodb.com/docs/manual/sharding/sharding-keys/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Shard Key",
+        "source": "https://www.mongodb.com/docs/manual/sharding/sharding-keys/"
+      },
+      {
+        "topic": "Hot Spotting",
+        "source": "https://docs.aws.amazon.com/dynamodb/latest/developerguide/bp-partition-key-design.html"
+      },
+      {
+        "topic": "Consistent Hashing",
+        "source": "https://www.toptal.com/big-data/consistent-hashing"
+      }
+    ]
   }
 ]

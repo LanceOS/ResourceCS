@@ -1,0 +1,317 @@
+[
+  {
+    "topic": "Atomicity (ACID)",
+    "summary": {
+      "title": "A Deep Dive into Atomicity",
+      "body": "Atomicity, the 'A' in the **ACID** properties, is a foundational principle for ensuring the reliability of database transactions. The core concept is the **'all-or-nothing'** rule, which means a transaction is treated as a single, indivisible unit of work. Either all operations within the transaction are successfully completed and committed, or if any part of the transaction fails, the entire transaction is aborted. The database is then returned to its state before the transaction began through a process called a **rollback**. This mechanism is crucial for preventing partial updates and maintaining data integrity.\n\nA classic example is a **bank transfer** 🏦. A transaction to move money from account A to account B involves two distinct operations: debiting account A and crediting account B. If the debit succeeds but the credit fails (e.g., due to a system crash), atomicity ensures the entire transaction is rolled back. The debit is undone, and the money is restored to account A, preventing a state where the funds have disappeared from the system. This guarantees the database never enters a state of logical inconsistency caused by a partially completed transaction.\n\nTo achieve atomicity, database management systems (DBMS) often use a **transaction log** or **write-ahead log (WAL)**. This log records the changes made by a transaction. If the transaction fails, the log is used to undo the changes. If it succeeds, the log is used to confirm the commit. This robust approach makes atomicity a cornerstone of reliable database management, particularly in mission-critical applications where data accuracy is essential. ",
+      "sources": [
+        {
+          "name": "IBM: What is ACID Compliance?",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Microsoft: Transactions",
+          "source": "https://learn.microsoft.com/en-us/sql/relational-databases/transactions/transactions"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "ACID compliance",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Database transactions",
+          "source": "https://learn.microsoft.com/en-us/sql/relational-databases/transactions/transactions"
+        },
+        {
+          "name": "Rollback and Commit",
+          "source": "https://www.bmc.com/blogs/rollback-commit/"
+        },
+        {
+          "name": "Write-ahead log (WAL)",
+          "source": "https://en.wikipedia.org/wiki/Write-ahead_logging"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Consistency (ACID)",
+    "summary": {
+      "title": "A Deep Dive into Consistency (ACID)",
+      "body": "Consistency, the 'C' in **ACID**, is a property that ensures a transaction can only transition the database from one valid state to another. This means all data written to the database must conform to a set of predefined rules and constraints, such as data type constraints, **foreign key constraints**, or other business logic. If a transaction attempts to violate any of these rules, the entire transaction is aborted and rolled back. This property is crucial for maintaining the **logical integrity** of the data within the database.\n\nFor instance, if a database has a rule that prevents a bank account balance from becoming negative, any transaction that attempts to debit an account to a negative value will be rejected. The database will enforce this rule, preventing the transaction from completing and thus keeping the database in a consistent and valid state. It’s important to distinguish **ACID consistency** from **CAP consistency**. ACID consistency is about maintaining the logical integrity of data within a single database system, ensuring it adheres to its own rules. CAP consistency, on the other hand, is a much stricter form of consistency for distributed systems, where all nodes must have the same, most up-to-date data at the same time.\n\nConsistency is enforced by the DBMS, which checks the transaction's changes against the defined constraints before committing. This protects against the introduction of corrupt or nonsensical data, making it a vital component of a reliable and trustworthy database system. ",
+      "sources": [
+        {
+          "name": "IBM: What is ACID Compliance?",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Oracle: Database Integrity Constraints",
+          "source": "https://docs.oracle.com/cd/E11882_01/server.112/e41084/cons_ref001.htm"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "ACID compliance",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Database integrity constraints",
+          "source": "https://docs.oracle.com/cd/E11882_01/server.112/e41084/cons_ref001.htm"
+        },
+        {
+          "name": "ACID vs. CAP Consistency",
+          "source": "https://www.bmc.com/blogs/acid-vs-cap-theorems/"
+        },
+        {
+          "name": "Foreign key constraints",
+          "source": "https://en.wikipedia.org/wiki/Foreign_key"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Isolation (ACID)",
+    "summary": {
+      "title": "A Deep Dive into Isolation (ACID)",
+      "body": "Isolation, the 'I' in **ACID**, guarantees that concurrent transactions do not interfere with one another. To a user, it appears as if each transaction is running in a serial fashion, one after the other, even if they are executing simultaneously. This property is essential for preventing common concurrency issues that can lead to data corruption or inconsistent views of the data.\n\nWithout isolation, problems like **dirty reads** (reading uncommitted data), **non-repeatable reads** (reading different data in the same transaction), and **phantom reads** (new rows appearing in the same transaction) can occur. For example, if one transaction is in the process of updating a value but has not yet committed, a second transaction might read this uncommitted 'dirty' data. If the first transaction then fails and rolls back, the data read by the second transaction is now invalid. Isolation mechanisms are designed to prevent such scenarios.\n\nDatabases offer different **isolation levels** to balance the degree of isolation with performance. The highest level, **Serializable**, provides the strongest guarantee by making transactions appear to run one after another, but it can have a high performance cost. Lower levels, like 'Read Committed', offer better performance by relaxing some isolation guarantees. The choice of isolation level is a critical design decision based on the application's needs for data integrity versus throughput. Isolation is typically achieved through techniques such as **locking** and **Multi-Version Concurrency Control (MVCC)**. ",
+      "sources": [
+        {
+          "name": "IBM: What is ACID Compliance?",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Ohio State University: Concurrency Control",
+          "source": "https://u.osu.edu/cst/2018/10/25/concurrency-control/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "ACID compliance",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Concurrency control",
+          "source": "https://u.osu.edu/cst/2018/10/25/concurrency-control/"
+        },
+        {
+          "name": "Isolation levels",
+          "source": "https://learn.microsoft.com/en-us/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide"
+        },
+        {
+          "name": "Dirty reads, non-repeatable reads, phantom reads",
+          "source": "https://en.wikipedia.org/wiki/Isolation_(database_systems)#Isolation_levels"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Durability (ACID)",
+    "summary": {
+      "title": "A Deep Dive into Durability (ACID)",
+      "body": "Durability, the 'D' in **ACID**, is the guarantee that once a transaction has been successfully committed, its changes are permanent and will survive any subsequent system failures. This includes power outages, system crashes, or other unexpected events. The committed data is written to **non-volatile storage** (like a hard drive or SSD) in a way that ensures it will not be lost, providing a high level of reliability. This property is paramount in applications where data loss is unacceptable, such as financial or healthcare systems.\n\nThe primary mechanism for achieving durability is the use of a **transaction log** or **write-ahead log (WAL)**. Before a transaction is officially considered 'committed', the database system first writes the transaction's changes to this log on disk. The log contains all the information needed to reapply the changes if a system crash occurs. Once the log entry is safely on non-volatile storage, the transaction can be declared committed to the user. This is a crucial step. Even if the actual data files haven't been updated yet, the log guarantees that the committed changes can be restored upon system restart through a **database recovery** process.\n\nDurability gives confidence that once a user receives a 'transaction committed' message, they can trust that their changes are permanently saved and will persist regardless of any immediate system failures. This makes durability a cornerstone of a fault-tolerant and reliable database system. ",
+      "sources": [
+        {
+          "name": "IBM: What is ACID Compliance?",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Oracle: Database Recovery",
+          "source": "https://docs.oracle.com/cd/E11882_01/server.112/e40540/recovery.htm"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "ACID compliance",
+          "source": "https://www.ibm.com/topics/acid-compliance"
+        },
+        {
+          "name": "Database recovery",
+          "source": "https://docs.oracle.com/cd/E11882_01/server.112/e40540/recovery.htm"
+        },
+        {
+          "name": "Transaction logging",
+          "source": "https://www.scylladb.com/glossary/commitlog/"
+        },
+        {
+          "name": "Write-ahead log (WAL)",
+          "source": "https://en.wikipedia.org/wiki/Write-ahead_logging"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Consistency (CAP)",
+    "summary": {
+      "title": "A Deep Dive into Consistency (CAP Theorem)",
+      "body": "In the context of the **CAP theorem**, Consistency (C) has a specific and powerful meaning that is different from ACID consistency. It dictates that all clients in a distributed system must see the same, most up-to-date data at the same time, regardless of which node they connect to. After a write operation is successfully completed on one node, any subsequent read operation from any other node must return the value of that most recent write. This is a very strong form of consistency, often referred to as **linearizability**.\n\nThe challenge with this property arises during a **network partition**, where communication between some nodes is broken. If a write operation is sent to a node on one side of the partition, the system cannot confirm the write until it is replicated to all other nodes. Since communication is broken, this is impossible. To maintain consistency, the system must block the write and subsequent reads, sacrificing availability. This trade-off is the central insight of the CAP theorem: you can't have strong consistency and availability simultaneously during a partition. Systems that prioritize consistency (CP systems) will either fail the request or block it until the partition is resolved, ensuring no client ever reads stale data. This is often the priority for applications where data accuracy is non-negotiable, like financial trading platforms or airline reservation systems. ",
+      "sources": [
+        {
+          "name": "IBM: CAP Theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "ScienceDirect: Distributed Systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "CAP theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Distributed systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        },
+        {
+          "name": "ACID vs. CAP Consistency",
+          "source": "https://www.bmc.com/blogs/acid-vs-cap-theorems/"
+        },
+        {
+          "name": "Linearizability",
+          "source": "https://en.wikipedia.org/wiki/Linearizability"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Availability (CAP)",
+    "summary": {
+      "title": "A Deep Dive into Availability (CAP Theorem)",
+      "body": "Availability (A), in the context of the **CAP theorem**, is the guarantee that every request to a non-failing node in a distributed system will receive a response, without a timeout or error. The system must always be operational and able to process requests, even if some nodes are down or if a **network partition** has occurred. This ensures that the service remains accessible to clients, which is crucial for applications that demand high uptime and responsiveness, such as e-commerce websites or social media platforms.\n\nAvailability is often chosen as a priority over consistency during a network partition. In an 'AP' system, when a partition occurs, the system will continue to serve requests from all sides of the partition. For example, if a client reads data from a node on one side of the partition, that node will respond with the data it has, even if a more recent update has been committed on a node on the other side. The system remains available, but the response might contain **stale data**. The system will eventually become consistent once the partition is resolved, a concept known as **eventual consistency**.\n\nFor many applications, this is an acceptable trade-off. A social media feed can afford to be slightly out of date, but it must be accessible to users. A highly available system is designed to tolerate partial failures and continue to function, providing a seamless experience to the user. This is a fundamental design choice in distributed systems that informs the architecture of many modern NoSQL databases. ",
+      "sources": [
+        {
+          "name": "IBM: CAP Theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Microsoft: Eventual Consistency",
+          "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/eventual-consistency"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "CAP theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Distributed systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        },
+        {
+          "name": "Eventual Consistency",
+          "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/eventual-consistency"
+        },
+        {
+          "name": "Network partition",
+          "source": "https://www.dremio.com/wiki/network-partition/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Partition Tolerance (CAP)",
+    "summary": {
+      "title": "A Deep Dive into Partition Tolerance (CAP Theorem)",
+      "body": "Partition Tolerance (P) is the 'P' in the **CAP theorem**, and it's the ability of a distributed system to continue operating even if there are **network failures** that prevent communication between some of its nodes. A network partition is an inevitable reality in any large-scale distributed system, as network links can and will fail. Because of this, the CAP theorem considers partition tolerance a prerequisite for any distributed system. You must assume that partitions will happen and design your system to handle them gracefully.\n\nThe central insight of the CAP theorem is that once you have Partition Tolerance, you are forced to choose between the other two properties: **Consistency (C)** or **Availability (A)**. You cannot have all three. This choice is the fundamental trade-off that defines the behavior of a distributed system during a failure. For example, a system that prioritizes consistency (a CP system) will become unavailable during a partition to ensure that data remains consistent across all nodes. In contrast, a system that prioritizes availability (an AP system) will remain operational but may serve inconsistent or stale data. The CAP theorem provides a framework for understanding these fundamental design choices. Many modern distributed databases and services are classified based on this trade-off, with most NoSQL databases opting for an AP model to prioritize uptime and scalability. ",
+      "sources": [
+        {
+          "name": "IBM: CAP Theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Dremio: What is a Network Partition?",
+          "source": "https://www.dremio.com/wiki/network-partition/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "CAP theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Distributed systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        },
+        {
+          "name": "Network partition",
+          "source": "https://www.dremio.com/wiki/network-partition/"
+        },
+        {
+          "name": "CP and AP systems",
+          "source": "https://www.bmc.com/blogs/cap-theorem/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "The P/A/C part of the PACELC theorem",
+    "summary": {
+      "title": "A Deep Dive into P/A/C (PACELC Theorem)",
+      "body": "The **PACELC theorem** is a powerful extension of the CAP theorem. The 'P/A/C' part of the theorem directly addresses the scenario where a network **Partition (P)** occurs, essentially restating the core principle of CAP. During a partition, a distributed system must make a choice: either prioritize **Availability (A)** or **Consistency (C)**. It cannot guarantee both.\n\n* **PA Systems**: Prioritize availability. When a partition occurs, these systems will continue to serve requests and accept writes, even if it means different nodes hold different versions of the data. This results in temporary inconsistency but ensures the system remains operational and responsive. Many NoSQL databases, like Cassandra, are designed as PA systems.\n* **PC Systems**: Prioritize consistency. When a partition occurs, these systems will block requests or become unavailable to ensure that no stale data is served. They will wait for the partition to heal and for all nodes to synchronize before proceeding. This guarantees data integrity at the cost of uptime. Databases like CockroachDB are examples of PC systems.\n\nThis first part of PACELC acknowledges that network partitions are an inevitable part of distributed systems and forces a clear choice between availability and consistency in the face of this reality. It sets the stage for the second half of the theorem, which considers a different set of trade-offs under normal operating conditions. ",
+      "sources": [
+        {
+          "name": "ScyllaDB: What is the PACELC Theorem?",
+          "source": "https://www.scylladb.com/glossary/pacelc-theorem/"
+        },
+        {
+          "name": "IBM: CAP Theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "PACELC theorem",
+          "source": "https://www.scylladb.com/glossary/pacelc-theorem/"
+        },
+        {
+          "name": "CAP theorem",
+          "source": "https://www.ibm.com/cloud/learn/cap-theorem"
+        },
+        {
+          "name": "Distributed systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        },
+        {
+          "name": "Network partition",
+          "source": "https://www.dremio.com/wiki/network-partition/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "The E/L/C part of the PACELC theorem",
+    "summary": {
+      "title": "A Deep Dive into E/L/C (PACELC Theorem)",
+      "body": "The 'E/L/C' part of the **PACELC theorem** is what distinguishes it from the CAP theorem. It addresses the 'Else' (E) condition, which is when there is **no network partition**. In this normal operating state, a distributed system still faces a critical trade-off: it must choose between prioritizing low **Latency (L)** or strong **Consistency (C)**.\n\n* **EL Systems**: Prioritize low latency. These systems are optimized to respond as quickly as possible, even if it means serving data that might be slightly out of date (i.e., not perfectly consistent across all nodes). This is often the case with systems that use asynchronous data replication, where a write is acknowledged before it's replicated to all nodes. The system is fast, but it is **eventually consistent**. Many of the 'AP' systems from the CAP theorem are also 'EL' systems.\n* **EC Systems**: Prioritize strong consistency. These systems will wait for data to be fully synchronized across all relevant nodes before responding to the client. This guarantees that the user always gets the most up-to-date data, but it introduces a delay, resulting in higher latency. Many of the 'PC' systems from the CAP theorem are also 'EC' systems.\n\nThis part of the theorem is vital because it recognizes that the trade-off between consistency and latency exists at all times, not just during a partition. The choice between E/L and E/C is a core architectural decision that impacts the performance and data accuracy of the system under normal, everyday circumstances. ",
+      "sources": [
+        {
+          "name": "ScyllaDB: What is the PACELC Theorem?",
+          "source": "https://www.scylladb.com/glossary/pacelc-theorem/"
+        },
+        {
+          "name": "InfoQ: A Better Way to Think about Consistency",
+          "source": "https://www.infoq.com/articles/pacelc-cap-theorem/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "PACELC theorem",
+          "source": "https://www.scylladb.com/glossary/pacelc-theorem/"
+        },
+        {
+          "name": "Consistency vs. Latency",
+          "source": "https://www.infoq.com/articles/pacelc-cap-theorem/"
+        },
+        {
+          "name": "Distributed systems",
+          "source": "https://www.sciencedirect.com/topics/computer-science/distributed-system"
+        },
+        {
+          "name": "Eventual consistency",
+          "source": "https://learn.microsoft.com/en-us/azure/architecture/patterns/eventual-consistency"
+        }
+      ]
+    }
+  }
+]

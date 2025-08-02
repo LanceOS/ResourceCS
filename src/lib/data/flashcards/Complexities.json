@@ -61,7 +61,7 @@
   },
   {
     "question": "What does the 'n' in time and space complexity represent?",
-    "answer": "The 'n' represents the **size of the input**, not the input value itself. For an array or list, 'n' is the number of elements. For a tree, it might be the number of nodes. It is the variable that represents the scale of the problem and drives the growth of the algorithm's resource usage.",
+    "answer": "The 'n' represents the **size of the input**, not the input value itself. For an array or list, 'n' is the number of elements. For a graph, it can be the number of nodes or edges. For a string, it is the length of the string. It is the variable that represents the scale of the problem and drives the growth of the algorithm's resource usage.",
     "sources": [
       {
         "name": "Big-O, Big-Omega, Big-Theta",
@@ -163,6 +163,54 @@
       {
         "topic": "A* Search Algorithm",
         "link": "https://www.redblobgames.com/pathfinding/a-star/introduction.html"
+      }
+    ]
+  },
+  {
+    "question": "Explain Big O, Big Omega, and Big Theta notation.",
+    "answer": "Big O ($\\mathcal{O}$): Describes the **upper bound** or **worst-case scenario**. It gives a limit on the maximum number of operations an algorithm will perform as the input size 'n' grows. For example, a linear search is $\\mathcal{O}(n)$ because in the worst case, it must check every element.\n\nBig Omega ($\\Omega$): Describes the **lower bound** or **best-case scenario**. It gives a limit on the minimum number of operations an algorithm will perform. A linear search is $\\Omega(1)$ because in the best case, the desired element is the first one you check.\n\nBig Theta ($\\Theta$): Describes the **tight bound**. An algorithm is $\\Theta(g(n))$ if it is both $\\mathcal{O}(g(n))$ and $\\Omega(g(n))$. This means the running time is always proportional to $g(n)$ for sufficiently large 'n'. For example, Merge Sort is $\\Theta(n \\log n)$ as its best, average, and worst-case complexities are all $\\mathcal{O}(n \\log n)$.",
+    "sources": [
+      {
+        "name": "GeeksforGeeks: Analysis of Algorithms",
+        "source": "https://www.geeksforgeeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Asymptotic analysis",
+        "link": "https://www.geeksforgeeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+      },
+      {
+        "topic": "Mathematical definitions of asymptotic notations",
+        "link": "https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/analysis/big-o.html"
+      }
+    ]
+  },
+  {
+    "question": "What's the difference between worst-case, best-case, and average-case analysis?",
+    "answer": "Worst-Case Analysis ($\\mathcal{O}$): Measures the maximum possible running time an algorithm can take on any input of size 'n'. This is the most common analysis because it guarantees the algorithm will not take longer than this time.\n\nBest-Case Analysis ($\\Omega$): Measures the minimum possible running time an algorithm can take. This is often not very useful in practice as it represents an ideal scenario that may not be encountered.\n\nAverage-Case Analysis: Measures the expected running time of an algorithm over all possible inputs of size 'n'. This can be more complex to calculate as it requires assumptions about the distribution of input data.\n\nFor a linear search, the worst case is finding the element at the end of the array ($\\mathcal{O}(n)$), the best case is finding it at the beginning ($\\mathcal{O}(1)$), and the average case is finding it somewhere in the middle.",
+    "sources": [
+      {
+        "name": "Introduction to Algorithms (CLRS)",
+        "source": "https://mitpress.mit.edu/books/introduction-algorithms-third-edition"
+      },
+      {
+        "name": "The Algorithmist",
+        "source": "https://www.the-algorithmist.com/time-complexity-best-average-worst/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Amortized analysis",
+        "link": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-model-of-computation-and-review-of-asymptotic-notation/"
+      },
+      {
+        "topic": "Probabilistic analysis",
+        "link": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-22-probabilistic-analysis-of-algorithms/"
+      },
+      {
+        "topic": "Random-access machine (RAM) model of computation",
+        "link": "https://www.cs.princeton.edu/courses/archive/fall10/cos226/lectures/01-AnalysisOfAlgorithms.pdf"
       }
     ]
   }

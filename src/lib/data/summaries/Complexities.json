@@ -1,0 +1,337 @@
+[
+	{
+		"topic": "Time complexity",
+		"summary": {
+			"title": "A Deep Dive into Time Complexity",
+			"body": "Time complexity is a fundamental concept in computer science that measures how the **running time** of an algorithm grows as the size of its input, denoted as **'n'**, increases. It's a way to analyze and predict the efficiency of an algorithm, regardless of the specific hardware or programming language used. The core idea is to count the number of 'elementary operations' an algorithm performs as a function of 'n'.\n\nThis measure is typically expressed using **Big O notation ($\\mathcal{O}$)**, which provides an **asymptotic upper bound** on the growth rate. Big O notation focuses on the worst-case scenario, providing a guarantee that an algorithm will not take longer than a certain amount of time. For example, if an algorithm has a time complexity of $\\mathcal{O}(n)$, it means that its running time grows linearly with the size of the input. This analysis is crucial for programmers to compare different algorithms and make informed decisions about which one is most suitable for a given problem, especially when dealing with large datasets where performance is critical. ",
+			"sources": [
+				{
+					"name": "IBM: Big-O Notation",
+					"source": "https://www.ibm.com/topics/big-o-notation"
+				},
+				{
+					"name": "MIT OpenCourseWare: Introduction to Algorithms",
+					"source": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-1-introduction-to-algorithms/"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Big O, Big Omega, and Big Theta Notation",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				},
+				{
+					"name": "Algorithm analysis",
+					"source": "https://www.cs.princeton.edu/courses/archive/fall10/cos226/lectures/01-AnalysisOfAlgorithms.pdf"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Common time complexities",
+		"summary": {
+			"title": "A Deep Dive into Common Time Complexities",
+			"body": "Understanding common time complexities is essential for any programmer. These are the standard categories used to describe how an algorithm's running time scales with the input size 'n'. They are ranked here from most efficient to least efficient:\n\n* **$\\mathcal{O}(1)$ - Constant Time**: The algorithm's running time is constant and does not change with the input size. Example: Accessing an element in an array by its index, like `array[5]`. \n\n* **$\\mathcal{O}(\\log n)$ - Logarithmic Time**: The running time grows logarithmically with the input size. This is very efficient. Example: **Binary search** in a sorted array, where the search space is halved in each step.\n\n* **$\\mathcal{O}(n)$ - Linear Time**: The running time grows directly and proportionally with the input size. Example: A simple `for` loop that iterates through every element of an array once.\n\n* **$\\mathcal{O}(n \\log n)$ - Log-linear Time**: The running time grows as a product of linear and logarithmic factors. This is typical for efficient, 'divide and conquer' sorting algorithms. Example: **Merge Sort** or **Quicksort**.\n\n* **$\\mathcal{O}(n^2)$ - Quadratic Time**: The running time grows quadratically with the input size. This often results from nested loops. Example: **Bubble Sort** or **Insertion Sort**.\n\n* **$\\mathcal{O}(2^n)$ - Exponential Time**: The running time doubles with each additional element. This is extremely inefficient and only feasible for very small input sizes. Example: The naive recursive solution for the **Fibonacci sequence**.",
+			"sources": [
+				{
+					"name": "Big-O Algorithm Complexity Cheat Sheet",
+					"source": "https://www.bigocheatsheet.com/"
+				},
+				{
+					"name": "Time and Space Complexity: A Beginner's Guide",
+					"source": "https://medium.com/@pnandhiniofficial/time-and-space-complexity-a-beginners-guide-88d617d29d01"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Merge sort",
+					"source": "https://www.geeksforgeeks.org/merge-sort/"
+				},
+				{
+					"name": "Binary search",
+					"source": "https://www.geeksforgeeks.org/binary-search/"
+				},
+				{
+					"name": "Master Theorem for Recurrence Relations",
+					"source": "https://www.geeksforgeeks.org/master-theorem-for-divide-and-conquer-recurrences/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Calculating time complexity",
+		"summary": {
+			"title": "A Deep Dive into Calculating Time Complexity",
+			"body": "To calculate an algorithm's time complexity, you must analyze its code and count the number of fundamental operations it performs as a function of the input size, 'n'. This process involves several key steps:\n\n1.  **Identify Elementary Operations**: These are operations that take a fixed amount of time to complete, such as arithmetic operations ($+,-,*,/$), variable assignments, comparisons, and array lookups. Each of these is considered to take one 'unit' of time.\n\n2.  **Analyze Control Structures**: Examine loops and recursive calls. A single loop that runs 'n' times will contribute $n$ operations. A nested loop, where the inner loop runs 'n' times for each of the 'n' iterations of the outer loop, will result in $n \\times n = n^2$ operations.\n\n3.  **Form a Function**: Express the total count of operations as a function of 'n'. For example, an algorithm with a linear loop followed by a quadratic nested loop might have a function like $f(n) = 3n^2 + 10n + 5$.\n\n4.  **Apply Big O Notation**: This is the final and most critical step. You simplify the function by discarding constant factors and lower-order terms. The dominant term is the one that grows the fastest as 'n' becomes very large. In the example above, $n^2$ is the dominant term, so the time complexity is simplified to $\\mathcal{O}(n^2)$. This is because, for large values of 'n', the $10n + 5$ part of the function becomes insignificant compared to the $3n^2$ part. ",
+			"sources": [
+				{
+					"name": "Hackerearth: How to Calculate Time Complexity",
+					"source": "https://www.hackerearth.com/practice/basic-programming/complexity-analysis/time-and-space-complexity/tutorial/"
+				},
+				{
+					"name": "Princeton University: Time Complexity Analysis of Algorithms",
+					"source": "https://www.cs.princeton.edu/courses/archive/fall10/cos226/lectures/01-AnalysisOfAlgorithms.pdf"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Master Theorem for Recurrence Relations",
+					"source": "https://www.geeksforgoeks.org/master-theorem-for-divide-and-conquer-recurrences/"
+				},
+				{
+					"name": "Asymptotic analysis",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "The meaning of 'n'",
+		"summary": {
+			"title": "A Deep Dive into the Meaning of 'n'",
+			"body": "In the context of algorithm complexity analysis, the variable **'n'** is a symbolic representation of the **size of the input**. It is a crucial part of the analysis because it represents the scale of the problem and dictates how the algorithm's resource usage (time and space) will grow.\n\nWhat 'n' represents can vary depending on the data structure or algorithm:\n\n* **For an array or a list**: 'n' is the number of elements in the collection.\n* **For a string**: 'n' is the length of the string.\n* **For a matrix**: 'n' might be the number of rows, columns, or the total number of cells.\n* **For a graph**: 'n' can represent the number of vertices (nodes) or the number of edges.\n\nIt is important to remember that 'n' represents the *size* of the input, not its value. For example, in an algorithm that iterates through a list, 'n' is the number of items in that list, regardless of whether the items are small integers or large objects. The complexity is measured by how the algorithm's performance changes as the number of items, 'n', increases. ",
+			"sources": [
+				{
+					"name": "Cornell University: Big-O, Big-Omega, Big-Theta",
+					"source": "https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/analysis/big-o.html"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Input size",
+					"source": "https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/analysis/big-o.html"
+				},
+				{
+					"name": "Scalability",
+					"source": "https://vitalflux.com/model-complexity-overfitting-in-machine-learning/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Big O notation",
+		"summary": {
+			"title": "A Deep Dive into Big O Notation",
+			"body": "Big O notation ($\\mathcal{O}$) is the most widely used tool for analyzing algorithm efficiency. The 'O' stands for **'Order of'**, and it represents the **asymptotic upper bound** on the growth rate of a function. In simpler terms, it's a way to describe the **worst-case scenario** for an algorithm's performance.\n\nWhen we say an algorithm is $\\mathcal{O}(n^2)$, we are stating that its running time will not grow faster than a quadratic function of the input size 'n'. This provides a crucial guarantee about the algorithm's scalability. Big O notation intentionally simplifies the analysis by ignoring constant factors and lower-order terms. For example, a function like $f(n) = 5n^2 + 100n + 500$ would be expressed as $\\mathcal{O}(n^2)$ because as 'n' gets very large, the $n^2$ term dominates the function's growth. The constant factor of 5 and the lower-order terms become negligible. This abstraction allows programmers to focus on the core, fundamental behavior of an algorithm's efficiency without getting bogged down in minor details that vary between different machines or implementations. ",
+			"sources": [
+				{
+					"name": "freeCodeCamp: What is Big O Notation?",
+					"source": "https://www.freecodecamp.org/news/a-gentle-introduction-to-big-o-notation/"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Asymptotic analysis",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				},
+				{
+					"name": "Worst-case scenario",
+					"source": "https://www.the-algorithmist.com/time-complexity-best-average-worst/"
+				},
+				{
+					"name": "Amortized Analysis",
+					"source": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-model-of-computation-and-review-of-asymptotic-notation/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Space complexity",
+		"summary": {
+			"title": "A Deep Dive into Space Complexity",
+			"body": "While time complexity measures an algorithm's running time, **space complexity** measures its **memory usage**. Specifically, it quantifies how the amount of memory an algorithm needs grows as the size of its input 'n' increases. Just like time complexity, it is analyzed using Big O notation.\n\nSpace complexity focuses primarily on the **auxiliary space**, which is the extra memory used by the algorithm beyond the storage required for the input itself. For example, if an algorithm takes an array of size 'n' as input but creates a new, separate array of the same size, its space complexity is $\\mathcal{O}(n)$. If the algorithm only uses a few variables regardless of the input size, its space complexity is $\\mathcal{O}(1)$.\n\nUnderstanding space complexity is crucial for situations where memory is a limited resource, such as in embedded systems or for processing massive datasets where the data might not fit into available RAM. Analyzing both time and space complexity is essential for making informed decisions about algorithm design, as there's often a **trade-off** between the two. Sometimes, a faster algorithm might require more memory, and a more memory-efficient algorithm might be slower. ",
+			"sources": [
+				{
+					"name": "University of San Francisco: Time and Space Complexity",
+					"source": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"
+				},
+				{
+					"name": "Daily.dev: Mastering Algorithm Complexity",
+					"source": "https://daily.dev/blog/mastering-algorithm-complexity-time-and-space-optimization"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Auxiliary space",
+					"source": "https://www.geeksforgoeks.org/auxiliary-space-and-time-complexity/"
+				},
+				{
+					"name": "Time-space trade-off",
+					"source": "https://en.wikipedia.org/wiki/Space-time_tradeoff"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Common space complexities",
+		"summary": {
+			"title": "A Deep Dive into Common Space Complexities",
+			"body": "Just like with time complexity, there are several common categories for space complexity, which describe the relationship between an algorithm's memory usage and the input size, 'n'. These are ranked from most memory-efficient to least efficient:\n\n* **$\\mathcal{O}(1)$ - Constant Space**: The algorithm's memory usage is constant and does not change with the input size. This is the most efficient space complexity. Example: A function that sums the elements of an array using a single variable to store the running total. Regardless of how large the array is, only one extra variable is needed.\n\n* **$\\mathcal{O}(n)$ - Linear Space**: The memory usage grows linearly with the input size. This is a common and often acceptable space complexity. Example: An algorithm that takes an array as input and creates a new array of the same size to store the results.\n\n* **$\\mathcal{O}(n^2)$ - Quadratic Space**: The memory usage grows quadratically with the input size. This can be very memory-intensive and is typically associated with algorithms that use two-dimensional data structures. Example: An algorithm that creates and populates an $n \\times n$ matrix. ",
+			"sources": [
+				{
+					"name": "Mastering Algorithm Complexity",
+					"source": "https://daily.dev/blog/mastering-algorithm-complexity-time-and-space-optimization"
+				},
+				{
+					"name": "Space Complexity",
+					"source": "https://en.wikipedia.org/wiki/Space_complexity"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Auxiliary space",
+					"source": "https://www.geeksforgoeks.org/auxiliary-space-and-time-complexity/"
+				},
+				{
+					"name": "Data structures",
+					"source": "https://www.geeksforgoeks.org/data-structures/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Why complexity analysis is important",
+		"summary": {
+			"title": "A Deep Dive into Why Complexity Analysis Matters",
+			"body": "Complexity analysis is not just a theoretical exercise for computer scientists; it's a critical, practical skill for every programmer. It provides the tools to predict and understand the performance and scalability of code. By analyzing an algorithm's time and space complexity, programmers can:\n\n1.  **Predict Performance**: You can estimate how an algorithm will behave as the input size grows without having to run the code on every possible input. This is vital for applications that need to handle massive datasets.\n\n2.  **Make Informed Design Decisions**: It allows you to weigh the trade-offs between different algorithms. For example, you might choose an $\\mathcal{O}(n \\log n)$ sorting algorithm over an $\\mathcal{O}(n^2)$ algorithm for large inputs, even if the $\\mathcal{O}(n^2)$ is simpler to implement. You can also make informed decisions about the time-space trade-off.\n\n3.  **Identify Bottlenecks**: Complexity analysis helps pinpoint parts of the code that are most likely to become performance bottlenecks, allowing you to focus your optimization efforts where they will have the greatest impact.\n\nIn essence, complexity analysis is the difference between writing code that works and writing code that is **efficient, scalable, and reliable**. It's a fundamental skill for building robust software that can handle real-world challenges. ",
+			"sources": [
+				{
+					"name": "BuiltIn: Why is Big O Important?",
+					"source": "https://builtin.com/software-engineering-perspectives/big-o-notation-important"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Algorithm optimization",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				},
+				{
+					"name": "The P versus NP Problem",
+					"source": "https://www.claymath.org/millennium-problems/p-vs-np-problem"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Recognizing inefficient code",
+		"summary": {
+			"title": "A Deep Dive into Recognizing Inefficient Code",
+			"body": "Recognizing inefficient code is a crucial skill for any programmer. Inefficient code is not necessarily code that is buggy or incorrect, but rather code that will perform poorly and become a bottleneck as the input size, 'n', grows. Here are some common patterns to look for:\n\n* **Nested Loops**: A common culprit for inefficiency is a loop nested inside another. This often results in a time complexity of $\\mathcal{O}(n^2)$ or worse. If you see a nested loop, especially one iterating over a large dataset, it's a red flag.\n\n* **Poor Data Structure Choice**: Using the wrong data structure for a task can drastically increase complexity. For instance, using an array for frequent insertions at the beginning of the list, which is an $\\mathcal{O}(n)$ operation, is inefficient. A linked list would be a better choice for this specific task, as it's an $\\mathcal{O}(1)$ operation.\n\n* **Repeated Calculations**: If the same expensive computation is being performed repeatedly inside a loop, it indicates a potential for optimization. You can often cache the result of the calculation outside the loop. This is especially true for recursive functions without **memoization**.\n\n* **Naive Algorithms**: Simple, brute-force solutions that check every possible combination often have very high complexities (e.g., exponential). While easy to write, they can be unusable for all but the smallest inputs. A classic example is a brute-force approach to a pathfinding problem. ",
+			"sources": [
+				{
+					"name": "Towards Data Science: How to Find the Time Complexity of an Algorithm",
+					"source": "https://towardsdatascience.com/how-to-find-the-time-complexity-of-an-algorithm-d5c2293427f7"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Memoization",
+					"source": "https://en.wikipedia.org/wiki/Memoization"
+				},
+				{
+					"name": "Brute-force algorithm",
+					"source": "https://www.geeksforgoeks.org/brute-force-algorithm-simple-explanation/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Naive algorithms",
+		"summary": {
+			"title": "A Deep Dive into Naive Algorithms",
+			"body": "A **naive algorithm** is a straightforward, simple, and often intuitive approach to solving a problem. It is also known as a **brute-force algorithm** because it relies on checking every possible combination or solution to find the correct answer. The primary characteristic of a naive algorithm is its simplicity and directness, often at the expense of efficiency.\n\nNaive algorithms are an excellent starting point for tackling a problem because they are easy to understand and implement correctly. For example, a naive approach to finding the largest number in an array would be to iterate through every element and keep track of the largest one seen so far. While this is efficient ($\mathcal{O}(n)$), a naive approach to a more complex problem, like finding a path in a graph, might involve exploring every single possible path, leading to an extremely inefficient exponential time complexity ($\mathcal{O}(n!)$ or $\mathcal{O}(2^n)$).\n\nWhile naive algorithms might not be practical for large-scale problems, they serve a vital purpose. They provide a correct baseline solution against which more optimized and complex algorithms can be measured. They are often a first step in the algorithm design process before moving on to more sophisticated techniques like **heuristics**, dynamic programming, or 'divide and conquer' to improve performance. ",
+			"sources": [
+				{
+					"name": "GeeksforGeeks: Brute-Force Algorithm",
+					"source": "https://www.geeksforgeeks.org/brute-force-algorithm-simple-explanation/"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Brute-force algorithm",
+					"source": "https://www.geeksforgoeks.org/brute-force-algorithm-simple-explanation/"
+				},
+				{
+					"name": "Heuristic",
+					"source": "https://www.techopedia.com/definition/31513/heuristic-search"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Heuristics",
+		"summary": {
+			"title": "A Deep Dive into Heuristics",
+			"body": "A **heuristic** is a mental shortcut or 'rule of thumb' used in an algorithm to find a solution quickly. Unlike a naive or brute-force algorithm that checks every possibility, a heuristic makes an educated guess to guide the search towards a good solution, but it does not guarantee that the solution will be the absolute best or most optimal one. The primary goal of a heuristic is to sacrifice the guarantee of optimality for a significant gain in speed and practicality.\n\nHeuristics are particularly useful for problems where finding the exact optimal solution is either computationally infeasible or requires an exponential amount of time. A classic example is the **A* search algorithm**, a popular pathfinding algorithm. Instead of blindly searching every possible path, the A* algorithm uses a heuristic to estimate the cost from the current node to the goal, allowing it to intelligently prioritize which paths to explore. This makes the search much faster. Heuristics are not always perfect and can sometimes lead to suboptimal results, but for many real-world applications—such as game AI, scheduling, or search engines—a fast, 'good-enough' answer is far more valuable than a slow, perfect one. ",
+			"sources": [
+				{
+					"name": "Techopedia: Heuristic Search",
+					"source": "https://www.techopedia.com/definition/31513/heuristic-search"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "A* Search Algorithm",
+					"source": "https://www.redblobgames.com/pathfinding/a-star/introduction.html"
+				},
+				{
+					"name": "Brute-force algorithm",
+					"source": "https://www.geeksforgoeks.org/brute-force-algorithm-simple-explanation/"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Big O, Big Omega, and Big Theta notation",
+		"summary": {
+			"title": "A Deep Dive into Asymptotic Notations",
+			"body": "While **Big O ($\\mathcal{O}$)** is the most common notation used in complexity analysis, it's part of a trio of asymptotic notations that provide a more complete picture of an algorithm's performance. These notations describe the growth rate of a function as the input size 'n' approaches infinity.\n\n* **Big O Notation ($\mathcal{O}$)**: The **upper bound**. This notation describes the **worst-case scenario**. If an algorithm is $\\mathcal{O}(f(n))$, it means the algorithm will not take longer than a time proportional to $f(n)$ for large inputs. For a linear search, the worst case is $\\mathcal{O}(n)$, as you might have to check every element.\n\n* **Big Omega Notation ($\Omega$)**: The **lower bound**. This notation describes the **best-case scenario**. If an algorithm is $\\Omega(g(n))$, it means the algorithm will take at least a time proportional to $g(n)$ for large inputs. For a linear search, the best case is $\\Omega(1)$, as the target element could be the very first one you check.\n\n* **Big Theta Notation ($\Theta$)**: The **tight bound**. This is the most precise notation and applies when an algorithm's best and worst-case complexities are the same. An algorithm is $\\Theta(h(n))$ if it is both $\\mathcal{O}(h(n))$ and $\\Omega(h(n))$. This means the running time is always proportional to $h(n)$ for sufficiently large 'n'. A good example is **Merge Sort**, which has a time complexity of $\\Theta(n \\log n)$ because its performance is consistently efficient regardless of the input's initial order. ",
+			"sources": [
+				{
+					"name": "GeeksforGeeks: Analysis of Algorithms",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Asymptotic analysis",
+					"source": "https://www.geeksforgoeks.org/analysis-of-algorithms-big-o-big-omega-and-big-theta-notation/"
+				},
+				{
+					"name": "Mathematical definitions of asymptotic notations",
+					"source": "https://www.cs.cornell.edu/courses/cs3110/2019sp/textbook/analysis/big-o.html"
+				}
+			]
+		}
+	},
+	{
+		"topic": "Worst-case, best-case, and average-case analysis",
+		"summary": {
+			"title": "A Deep Dive into Algorithm Analysis Cases",
+			"body": "To fully understand an algorithm's performance, it's important to consider three distinct scenarios for a given input size 'n'. These scenarios are often expressed using the asymptotic notations of **Big O**, **Big Omega**, and **Big Theta**.\n\n* **Worst-Case Analysis ($\mathcal{O}$)**: This is the most common and practical type of analysis. It measures the maximum possible running time an algorithm can take on any input of size 'n'. It provides a guarantee that the algorithm's performance will never be worse than this bound. For a **linear search**, the worst case is when the element you're looking for is at the very end of the list, requiring you to check every single item. This is an $\\mathcal{O}(n)$ operation.\n\n* **Best-Case Analysis ($\Omega$)**: This measures the minimum possible running time an algorithm can take. It represents the ideal, often unlikely, scenario. For a linear search, the best case is when the element you're looking for is the first item in the list, requiring only one check. This is an $\\Omega(1)$ operation.\n\n* **Average-Case Analysis**: This measures the expected running time of an algorithm over all possible inputs of size 'n'. This can be more complex to calculate and often requires making assumptions about the probability distribution of the inputs. For a linear search, the average case is when the element is somewhere in the middle of the list, resulting in an average time of $\\mathcal{O}(n)$.\n\nUnderstanding all three cases provides a comprehensive view of an algorithm's performance, helping programmers choose the right tool for the job. ",
+			"sources": [
+				{
+					"name": "Introduction to Algorithms (CLRS)",
+					"source": "https://mitpress.mit.edu/books/introduction-algorithms-third-edition"
+				},
+				{
+					"name": "The Algorithmist",
+					"source": "https://www.the-algorithmist.com/time-complexity-best-average-worst/"
+				}
+			],
+			"related_concepts": [
+				{
+					"name": "Amortized analysis",
+					"source": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-1-model-of-computation-and-review-of-asymptotic-notation/"
+				},
+				{
+					"name": "Probabilistic analysis",
+					"source": "https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/resources/lecture-22-probabilistic-analysis-of-algorithms/"
+				},
+				{
+					"name": "Random-access machine (RAM) model of computation",
+					"source": "https://www.cs.princeton.edu/courses/archive/fall10/cos226/lectures/01-AnalysisOfAlgorithms.pdf"
+				}
+			]
+		}
+	}
+]

@@ -15,15 +15,15 @@
     "additional_topics": [
       {
         "topic": "Dynamic Programming",
-        "link": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
       },
       {
         "topic": "Time-Space Tradeoff",
-        "link": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
+        "source": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
       },
       {
         "topic": "Idempotence",
-        "link": "https://aws.amazon.com/builders-library/idempotency/"
+        "source": "https://aws.amazon.com/builders-library/idempotency/"
       }
     ]
   },
@@ -43,15 +43,15 @@
     "additional_topics": [
       {
         "topic": "Time-Space Tradeoff",
-        "link": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
+        "source": "https://en.wikipedia.org/wiki/Space%E2%80%93time_tradeoff"
       },
       {
         "topic": "Big O Notation (Time and Space Complexity)",
-        "link": "https://www.ibm.com/topics/big-o-notation"
+        "source": "https://www.ibm.com/topics/big-o-notation"
       },
       {
         "topic": "Dynamic Programming",
-        "link": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
       }
     ]
   },
@@ -71,11 +71,11 @@
     "additional_topics": [
       {
         "topic": "Cache Invalidation",
-        "link": "https://en.wikipedia.org/wiki/Cache_invalidation"
+        "source": "https://en.wikipedia.org/wiki/Cache_invalidation"
       },
       {
         "topic": "Pure Functions",
-        "link": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+        "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
       }
     ]
   },
@@ -95,11 +95,11 @@
     "additional_topics": [
       {
         "topic": "Pure Functions",
-        "link": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
+        "source": "https://www.geeksforgeeks.org/pure-functions-in-javascript/"
       },
       {
         "topic": "Side Effects in Programming",
-        "link": "https://en.wikipedia.org/wiki/Side_effect_(computer_science)"
+        "source": "https://en.wikipedia.org/wiki/Side_effect_(computer_science)"
       }
     ]
   },
@@ -119,11 +119,43 @@
     "additional_topics": [
       {
         "topic": "Dynamic Programming",
-        "link": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+        "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
       },
       {
         "topic": "Time Complexity",
-        "link": "https://www.ibm.com/topics/big-o-notation"
+        "source": "https://www.ibm.com/topics/big-o-notation"
+      }
+    ]
+  },
+  {
+    "question": "How can memoization be applied to the Fibonacci sequence?",
+    "answer": "The naive recursive approach to calculating the Fibonacci sequence, `fib(n) = fib(n-1) + fib(n-2)`, has an exponential time complexity ($$O(2^n)$$) due to redundant recalculations of the same values. Memoization addresses this by storing the results of `fib(k)` for each `k` in a cache (e.g., a dictionary or array). When the function is called, it first checks the cache. If the result exists, it's returned instantly. Otherwise, the function computes the value, stores it in the cache, and then returns it. This reduces the time complexity to linear time ($$O(n)$$).",
+    "sources": [
+      {
+        "name": "GeeksforGeeks: Dynamic Programming vs. Memoization",
+        "source": "https://www.geeksforgeeks.org/memoization-vs-dynamic-programming/"
+      },
+      {
+        "name": "Real Python: Memoization in Python",
+        "source": "https://realpython.com/python-memoization/"
+      }
+    ],
+    "additional_topics": [
+      {
+        "topic": "Dynamic Programming",
+        "source": "https://www.geeksforgeeks.org/what-is-dynamic-programming/"
+      },
+      {
+        "topic": "Time Complexity",
+        "source": "https://www.ibm.com/topics/big-o-notation"
+      },
+      {
+        "topic": "Recursive Algorithms",
+        "source": "https://www.geeksforgeeks.org/introduction-to-recursion-data-structure-and-algorithm-tutorials/"
+      },
+      {
+        "topic": "Tail Recursion Optimization",
+        "source": "https://www.geeksforgeeks.org/tail-recursion-tutorial/"
       }
     ]
   }

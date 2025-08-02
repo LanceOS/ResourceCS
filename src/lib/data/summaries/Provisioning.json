@@ -1,0 +1,160 @@
+[
+  {
+    "topic": "Server Provisioning",
+    "summary": {
+      "title": "A Deep Dive into Server Provisioning",
+      "body": "Server provisioning is the comprehensive process of setting up a physical or virtual server to be ready for its intended function. This isn't just about turning on a machine; it's a multi-step process that ensures the server has all the necessary components and configurations. This includes installing the operating system, all required software and applications, and implementing security measures. It also involves configuring the server's network settings and storage. The goal is to make the server fully operational and ready to serve its purpose within an IT infrastructure. ",
+      "sources": [
+        {
+          "name": "Server Provisioning: The Definitive Guide",
+          "source": "https://www.ibm.com/topics/server-provisioning"
+        },
+        {
+          "name": "What is server provisioning?",
+          "source": "https://www.redhat.com/en/topics/automation/what-is-server-provisioning"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Infrastructure as Code (IaC)",
+          "source": "https://aws.amazon.com/what-is/iac/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Stateless Servers for Horizontal Scaling",
+    "summary": {
+      "title": "A Deep Dive into Stateless Servers for Horizontal Scaling",
+      "body": "Horizontally scaled server architectures require **stateless** servers to be efficient and resilient. A stateless server doesn't store any session-specific data—such as user information, cookies, or temporary variables—on the server itself. This is crucial because it allows any server instance behind a load balancer to handle any incoming request. If a server were to fail, its 'state' is not lost because all essential data is stored externally (e.g., in a database or a shared cache). This design enables seamless **fault tolerance** and high **scalability**. You can add or remove servers from the pool without disrupting user sessions, as the new server can pick up where the old one left off, ensuring a consistent user experience. ",
+      "sources": [
+        {
+          "name": "Stateful vs. Stateless Applications",
+          "source": "https://cloud.google.com/architecture/application-development/stateful-vs-stateless-applications"
+        },
+        {
+          "name": "The Twelve-Factor App: I. Codebase",
+          "source": "https://12factor.net/state"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Load Balancing Algorithms",
+          "source": "https://www.nginx.com/resources/glossary/load-balancing-algorithms/"
+        },
+        {
+          "name": "Session Affinity (Sticky Sessions)",
+          "source": "https://www.f5.com/services/resources/glossary/session-affinity"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Server Redundancy",
+    "summary": {
+      "title": "A Deep Dive into Server Redundancy",
+      "body": "Server redundancy is a key strategy for ensuring system reliability. It involves having duplicate or backup servers that are ready to take over the functions of a primary server in the event of a failure. The main goal is to eliminate any **single points of failure**, which are parts of a system that would cause the entire system to fail if they malfunction. By providing a backup system, redundancy minimizes downtime and ensures **high availability** and data protection. In a redundant setup, if one server goes down, the backup can seamlessly take over, often without any noticeable interruption to the end user. This is a crucial component of any robust disaster recovery and business continuity plan. ",
+      "sources": [
+        {
+          "name": "Server Redundancy",
+          "source": "https://www.ibm.com/topics/server-redundancy"
+        },
+        {
+          "name": "High Availability and Redundancy",
+          "source": "https://aws.amazon.com/what-is/high-availability/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Fault Tolerance",
+          "source": "https://www.ibm.com/topics/fault-tolerance"
+        },
+        {
+          "name": "Single Point of Failure (SPOF)",
+          "source": "https://www.cloudflare.com/learning/high-availability/what-is-a-single-point-of-failure-spof/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Active-Passive vs. Active-Active Redundancy",
+    "summary": {
+      "title": "A Deep Dive into Active-Passive vs. Active-Active Redundancy",
+      "body": "Server redundancy can be implemented in two primary configurations: **active-passive** and **active-active**. \n\n* In an **active-passive** setup, one server (the 'active' server) handles all incoming requests while a duplicate server (the 'passive' server) remains idle and ready. The passive server is a hot standby, synchronized with the active server, but it only becomes operational if the active server fails. This is a common and relatively simple approach to failover.\n\n* In an **active-active** setup, all servers are actively and simultaneously handling requests. A load balancer distributes traffic among all available servers. This provides superior resource utilization and enhanced scalability, as you can serve more users by adding more servers to the active pool. ",
+      "sources": [
+        {
+          "name": "Active-Active vs. Active-Passive Clustering",
+          "source": "https://www.starwindsoftware.com/blog/active-active-vs-active-passive-clustering"
+        },
+        {
+          "name": "High-Availability Architectures",
+          "source": "https://docs.aws.amazon.com/whitepapers/latest/disaster-recovery-dr-architecture/high-availability-architectures.html"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Load Balancing",
+          "source": "https://cloud.google.com/load-balancing/docs/load-balancing-overview"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Failover Systems",
+    "summary": {
+      "title": "A Deep Dive into Failover System Types",
+      "body": "Failover systems ensure business continuity by providing backup capabilities when a primary system fails. There are four main types of failover systems, each offering different trade-offs in terms of cost and speed of recovery: \n\n1.  **Cold Standby**: The backup system is completely offline and must be manually provisioned and started upon failure. This has the lowest cost but the longest recovery time. \n2.  **Warm Standby**: The backup is partially running and receives periodic updates from the primary system. It can take over more quickly than a cold standby, but there might be a small loss of recent data. \n3.  **Hot Standby (Active-Passive)**: The backup is a fully synchronized, operational replica of the primary system, ready for immediate failover. This ensures minimal downtime but is more expensive. \n4.  **Active-Active**: All systems are actively running and serving requests. If one fails, the load balancer simply directs traffic to the remaining servers, resulting in the quickest possible recovery. ",
+      "sources": [
+        {
+          "name": "Disaster Recovery RTO and RPO",
+          "source": "https://www.vmware.com/topics/glossary/content/recovery-time-objective-rto.html"
+        },
+        {
+          "name": "Failover in a distributed system",
+          "source": "https://aws.amazon.com/what-is/failover/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Recovery Time Objective (RTO)",
+          "source": "https://www.ibm.com/topics/rto"
+        },
+        {
+          "name": "Recovery Point Objective (RPO)",
+          "source": "https://www.ibm.com/topics/rpo"
+        },
+        {
+          "name": "Disaster Recovery",
+          "source": "https://www.cloudflare.com/learning/business/what-is-disaster-recovery/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "CAP Theorem",
+    "summary": {
+      "title": "A Deep Dive into the CAP Theorem",
+      "body": "The **CAP Theorem**, also known as Brewer's Theorem, is a fundamental principle in distributed system design. It states that a distributed system can only guarantee a maximum of two out of three properties at any given time: \n\n* **Consistency**: All nodes in the system have the same, most up-to-date data. A read from any node will return the most recent write. \n* **Availability**: Every request receives a response, without a guarantee that the response contains the most recent write. The system is always available to serve requests. \n* **Partition Tolerance**: The system continues to operate despite arbitrary message loss or failure of parts of the system. \n\nIn the event of a network partition (P), you are forced to choose between consistency and availability. You can design a system that sacrifices consistency for availability (AP system) or availability for consistency (CP system). Understanding this trade-off is critical for architects designing robust and scalable distributed systems. ",
+      "sources": [
+        {
+          "name": "Brewer's CAP Theorem",
+          "source": "https://www.geeksforgeeks.org/cap-theorem/"
+        },
+        {
+          "name": "CAP Theorem",
+          "source": "https://robertgreiner.com/cap-theorem-and-distributed-database-design/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Data Consistency Models",
+          "source": "https://cloud.google.com/spanner/docs/reference/consistency"
+        },
+        {
+          "name": "Microservices Architecture",
+          "source": "https://aws.amazon.com/microservices/"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,357 @@
+[
+  {
+    "topic": "Function",
+    "summary": {
+      "title": "A Deep Dive into Functions",
+      "body": "A **function** is a block of reusable, organized code designed to perform a specific, related action. It's a fundamental building block of most programming languages. Functions can accept inputs, known as **parameters**, perform a series of operations, and can optionally return a value. Using functions helps to break down a larger program into smaller, manageable, and modular components, which improves code readability, reusability, and maintainability. Functions also help avoid code repetition by allowing the same logic to be called from multiple places without rewriting it. ",
+      "sources": [
+        {
+          "name": "Python Functions",
+          "source": "https://docs.python.org/3/tutorial/controlflow.html#defining-functions"
+        },
+        {
+          "name": "Functions in JavaScript",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Function Scope",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions#function_scopes_and_closures"
+        },
+        {
+          "name": "Pure Functions",
+          "source": "https://www.ibm.com/docs/en/ads/24.0.1?topic=annotations-pure-functions"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Method",
+    "summary": {
+      "title": "A Deep Dive into Methods",
+      "body": "A **method** is essentially a function that is associated with an **object** or a **class**. It defines a behavior or an action that an object can perform. Because a method is tied to an object, it has privileged access to the object's internal data, or properties. For example, a `Car` object might have a `startEngine()` method that changes its internal `isRunning` property to `true`. In many object-oriented programming languages, a method can access the object's properties and other methods using a special keyword like `this` (in JavaScript or Java) or `self` (in Python), which refers to the current instance of the object. ",
+      "sources": [
+        {
+          "name": "Methods in Python",
+          "source": "https://docs.python.org/3/tutorial/classes.html#a-first-look-at-classes"
+        },
+        {
+          "name": "OOP in JavaScript",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#object_methods"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "The 'self' or 'this' keyword",
+          "source": "https://www.geeksforgeeks.org/php/what-is-the-difference-between-self-and-this/"
+        },
+        {
+          "name": "Class Methods vs. Instance Methods",
+          "source": "https://realpython.com/instance-class-and-static-methods-demystified/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Variable",
+    "summary": {
+      "title": "A Deep Dive into Variables",
+      "body": "A **variable** is a fundamental concept in programming that acts as a named container for a value. It's essentially a named storage location in the computer's memory. A key characteristic of a variable is that its stored value can be changed or 'varied' during the execution of a program. Variables are used to store all sorts of data, from numbers and text to more complex data structures. Each variable is associated with a specific **data type**, which determines the kind of value it can hold and the operations that can be performed on it. Understanding variable **scope** is also crucial, as it determines where in the code a variable can be accessed. ",
+      "sources": [
+        {
+          "name": "Variables in JavaScript",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#variables"
+        },
+        {
+          "name": "Python Variables",
+          "source": "https://docs.python.org/3/tutorial/introduction.html#first-steps-towards-programming"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Variable Scope",
+          "source": "https://www.freecodecamp.org/news/javascript-scope-tutorial-global-local-and-block-scope-with-var-let-and-const/"
+        },
+        {
+          "name": "Data Types",
+          "source": "https://www.w3schools.com/js/js_datatypes.asp"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Parameter vs. Argument",
+    "summary": {
+      "title": "A Deep Dive into Parameters vs. Arguments",
+      "body": "The terms **parameter** and **argument** are often used interchangeably, but they have distinct meanings. A **parameter** is a variable defined in the declaration of a function or method. It acts as a placeholder for the values that the function will receive when it's called. For example, in a function `def greet(name):`, `name` is the parameter. An **argument**, on the other hand, is the actual value that is passed to the function when it is invoked. So, when you call the function with `greet(\"Alice\")`, the string `\"Alice\"` is the argument. In simple terms, parameters are the names in the function definition, while arguments are the values you provide during the function call. ",
+      "sources": [
+        {
+          "name": "MDN Web Docs on Parameters and Arguments",
+          "source": "https://developer.mozilla.org/en-US/docs/Glossary/Parameter"
+        },
+        {
+          "name": "Java Documentation on Arguments and Parameters",
+          "source": "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Rest Parameters",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+        },
+        {
+          "name": "Default Parameters",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Class",
+    "summary": {
+      "title": "A Deep Dive into Classes",
+      "body": "A **class** is a fundamental concept in object-oriented programming (OOP) that serves as a blueprint or template for creating objects. It doesn't represent a real object itself but defines the properties (also known as attributes or data) and behaviors (methods) that all objects of that class will have. For example, a `Car` class might define properties like `color` and `make` and methods like `startEngine()` and `accelerate()`. Think of a class as the design for a house, specifying the number of rooms and where the doors are, but not being a physical house itself. The class provides the structure, but an **object** is what brings that structure to life. ",
+      "sources": [
+        {
+          "name": "Introduction to Classes in Python",
+          "source": "https://docs.python.org/3/tutorial/classes.html"
+        },
+        {
+          "name": "Classes in JavaScript",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Constructors",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor"
+        },
+        {
+          "name": "Static Methods",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Object",
+    "summary": {
+      "title": "A Deep Dive into Objects",
+      "body": "An **object** is a concrete instance of a class. While a class is the blueprint, an object is a real-world entity created from that blueprint. It is a self-contained unit that bundles together both data (attributes or properties) and the behaviors (methods) that operate on that data. For example, from the `Car` class, you could create an object named `my_car` with the properties `color: \"red\"` and `make: \"Toyota\"`. This object can then perform actions, such as `my_car.startEngine()`. This concept of bundling data and behavior is known as **encapsulation** and is a cornerstone of object-oriented programming. ",
+      "sources": [
+        {
+          "name": "OOP with objects in IBM Documentation",
+          "source": "https://www.ibm.com/topics/object-oriented-programming"
+        },
+        {
+          "name": "Objects in Java",
+          "source": "https://www.geeksforgeeks.org/object-in-java/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Object Prototype",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object"
+        },
+        {
+          "name": "Encapsulation",
+          "source": "https://www.sumologic.com/glossary/encapsulation"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Array",
+    "summary": {
+      "title": "A Deep Dive into Arrays",
+      "body": "An **array** is a fundamental data structure used to store a collection of elements. The key characteristic of an array is that it stores these elements in a single, contiguous block of memory. This allows for very fast access to any element in the collection using a numerical **index**. For example, in an array `[10, 20, 30]`, the element `20` can be accessed by its index `1`. While in some languages, arrays are fixed in size and can only hold a single data type, many modern languages offer dynamic arrays or `lists` that can change size and hold elements of different types. This flexibility makes them a versatile tool for managing collections of data. ",
+      "sources": [
+        {
+          "name": "Arrays in JavaScript",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array"
+        },
+        {
+          "name": "Arrays in C++",
+          "source": "https://www.geeksforgeeks.org/arrays-in-c/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Array vs. List",
+          "source": "https://discuss.codecademy.com/t/what-are-some-differences-between-an-array-and-a-list/351552"
+        },
+        {
+          "name": "Time Complexity of Array Operations",
+          "source": "https://www.freecodecamp.org/news/data-structures-101-linked-lists-arrays-and-more-a7d18721469e/"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Object destructuring",
+    "summary": {
+      "title": "A Deep Dive into Object Destructuring",
+      "body": "Object destructuring is a modern, concise syntax that allows developers to **unpack properties from an object into distinct variables**. This simplifies the process of extracting values from objects and assigning them to variables, often in a single line of code. Instead of writing `const name = user.name;` and `const age = user.age;`, you can achieve the same result with `const { name, age } = user;`. This syntax is not only more readable but can also make code cleaner by avoiding repetitive access to an object. It's a powerful feature, especially in functional programming, for easily accessing nested properties or for use with function parameters. It's also available for arrays, a concept known as **array destructuring**. ",
+      "sources": [
+        {
+          "name": "Destructuring assignment in MDN Web Docs",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring"
+        },
+        {
+          "name": "FreeCodeCamp article on Destructuring",
+          "source": "https://www.freecodecamp.org/news/how-to-use-object-destructuring-in-javascript/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Array Destructuring",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring"
+        },
+        {
+          "name": "Rest Parameters",
+          "source": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Encapsulation",
+    "summary": {
+      "title": "A Deep Dive into Encapsulation",
+      "body": "Encapsulation is a core principle of object-oriented programming (OOP) that involves bundling an object's **data (attributes)** and the **methods** that operate on that data into a single unit. The primary purpose of encapsulation is to protect the integrity of the data by hiding the internal implementation details from the outside world. This is often achieved through access modifiers like `private`, which restrict direct access to an object's properties. Instead, outside code can only interact with the object's data through controlled public methods, such as **getters** and **setters**. This prevents external parts of the program from unintentionally or maliciously changing an object's state, making the code more robust and easier to manage. ",
+      "sources": [
+        {
+          "name": "Encapsulation in Java",
+          "source": "https://www.geeksforgeeks.org/encapsulation-in-java/"
+        },
+        {
+          "name": "IBM Documentation on OOP Principles",
+          "source": "https://www.ibm.com/topics/object-oriented-programming"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Access Modifiers (public, private, protected)",
+          "source": "https://www.geeksforgeeks.org/java/access-modifiers-java/"
+        },
+        {
+          "name": "Getters and Setters",
+          "source": "https://dzone.com/articles/java-getter-and-setter-basics-common-mistakes-and"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Inheritance",
+    "summary": {
+      "title": "A Deep Dive into Inheritance",
+      "body": "Inheritance is a fundamental principle of object-oriented programming (OOP) that allows a new class, called the **subclass** or **child class**, to inherit the properties and methods of an existing class, known as the **superclass** or **parent class**. This creates a hierarchical relationship, often referred to as an 'is-a' relationship (e.g., a `Dog` 'is-a' `Animal`). The main benefit of inheritance is **code reuse**, as the subclass can use the code from the superclass without having to rewrite it. It also allows for the creation of more specialized classes that extend the functionality of a more general class. A subclass can also override a method from its parent class to provide a different implementation, a key component of **polymorphism**. ",
+      "sources": [
+        {
+          "name": "Inheritance in Python",
+          "source": "https://docs.python.org/3/tutorial/classes.html#inheritance"
+        },
+        {
+          "name": "Inheritance in Java",
+          "source": "https://www.w3schools.com/java/java_inheritance.asp"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Method Overriding",
+          "source": "https://docs.oracle.com/javase/8/docs/api/java/lang/Override.html"
+        },
+        {
+          "name": "Polymorphism",
+          "source": "https://www.ibm.com/topics/object-oriented-programming"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Polymorphism",
+    "summary": {
+      "title": "A Deep Dive into Polymorphism",
+      "body": "Polymorphism is an object-oriented programming (OOP) principle that means 'many forms.' It allows a single method or function to behave differently depending on the object it is called upon. A classic example is a `draw()` method in a `Shape` class hierarchy. A `Circle` object and a `Square` object can both have a `draw()` method, but their implementations will be different to draw their respective shapes. A key way to achieve polymorphism is through **method overriding**, where a subclass provides its own specific implementation of a method that is already defined in its superclass. This allows you to write code that interacts with a general class (e.g., `Shape`) and have the correct, specific method implementation called automatically, making code more flexible and extensible. ",
+      "sources": [
+        {
+          "name": "Polymorphism in Java",
+          "source": "https://www.geeksforgeeks.org/polymorphism-in-java/"
+        },
+        {
+          "name": "A guide to Polymorphism in JavaScript",
+          "source": "https://www.freecodecamp.org/news/polymorphism-in-javascript/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Method Overloading vs. Overriding",
+          "source": "https://www.index.dev/blog/overloading-vs-overriding-java"
+        },
+        {
+          "name": "Abstract Classes and Interfaces",
+          "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "OOP Principles",
+    "summary": {
+      "title": "A Deep Dive into the Four Principles of OOP",
+      "body": "Object-Oriented Programming (OOP) is built upon four foundational principles: **Encapsulation**, **Inheritance**, **Polymorphism**, and **Abstraction**.\n\n1.  **Encapsulation**: This principle involves bundling data and the methods that operate on it into a single unit (an object), and restricting direct access to the internal data. It protects data integrity and simplifies code management.\n2.  **Inheritance**: This allows a new class (subclass) to inherit attributes and behaviors from an existing class (superclass), promoting code reuse and establishing a clear hierarchy.\n3.  **Polymorphism**: Meaning 'many forms,' this principle allows a single interface to represent different underlying forms. For example, a single method name can have different implementations across multiple classes.\n4.  **Abstraction**: This principle focuses on hiding complex implementation details and only showing the essential features. It lets a programmer focus on the 'what' an object does, rather than the 'how' it does it, and is often achieved using abstract classes and interfaces.\n\nThese four principles work together to create modular, reusable, and maintainable code. ",
+      "sources": [
+        {
+          "name": "IBM: Object-Oriented Programming",
+          "source": "https://www.ibm.com/topics/object-oriented-programming"
+        },
+        {
+          "name": "GeeksforGeeks: OOPs Concepts in Java",
+          "source": "https://www.geeksforgeeks.org/object-oriented-programming-oops-concepts-in-java/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Abstract Classes and Interfaces",
+          "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+        },
+        {
+          "name": "Design Patterns",
+          "source": "https://en.wikipedia.org/wiki/Software_design_pattern"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Abstraction",
+    "summary": {
+      "title": "A Deep Dive into Abstraction in OOP",
+      "body": "Abstraction is a core principle of object-oriented programming (OOP) that simplifies complex reality by hiding unnecessary details and showing only the essential features of an object. The goal is to allow programmers to focus on the 'what' an object does rather than the 'how' it accomplishes it. A perfect analogy is driving a car: you interact with the accelerator pedal to increase speed, but you don't need to know the intricate mechanical or electronic processes happening under the hood. The complexity is **abstracted away**. In programming, this is often achieved through abstract classes and interfaces, which define a contract for what a class should do without providing a full implementation. This allows you to build complex systems by creating a clear, simple public interface while keeping the complex implementation hidden and manageable. ",
+      "sources": [
+        {
+          "name": "GeeksforGeeks: Abstraction in Java",
+          "source": "https://www.geeksforgeeks.org/abstraction-in-java/"
+        },
+        {
+          "name": "TutorialsPoint: C++ - Abstraction",
+          "source": "https://www.tutorialspoint.com/cplusplus/cpp_data_abstraction.htm"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Encapsulation vs. Abstraction",
+          "source": "https://www.sumologic.com/glossary/encapsulation"
+        },
+        {
+          "name": "Abstract Classes and Interfaces",
+          "source": "https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html"
+        },
+        {
+          "name": "Design Patterns",
+          "source": "https://en.wikipedia.org/wiki/Software_design_pattern"
+        }
+      ]
+    }
+  }
+]

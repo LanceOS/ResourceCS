@@ -1,0 +1,312 @@
+[
+  {
+    "topic": "Hyperparameters",
+    "summary": {
+      "title": "A Deep Dive into Hyperparameters",
+      "body": "Hyperparameters are external configuration settings that are set by the user *before* a machine learning model begins its training process. Unlike model parameters (weights and biases) which are learned from the data, hyperparameters are not. They are crucial because they control the fundamental aspects of how a model learns, its architecture, and its complexity. The choice of hyperparameters can significantly impact a model's performance, and a poor selection can lead to issues like underfitting or overfitting. Examples of common hyperparameters include the **learning rate**, the number of hidden layers in a neural network, or the regularization strength in a linear model. The process of finding the optimal set of hyperparameters is known as **hyperparameter tuning**. ",
+      "sources": [
+        {
+          "name": "Google Developers: Hyperparameter",
+          "source": "https://developers.google.com/machine-learning/glossary#hyperparameter"
+        },
+        {
+          "name": "Towards Data Science: Hyperparameters and How to Tune Them",
+          "source": "https://towardsdatascience.com/hyperparameters-and-how-to-tune-them-599185a4a9b2"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Hyperparameter Tuning (Grid Search, Random Search, Bayesian Optimization)",
+          "source": "https://developers.google.com/machine-learning/crash-course/running-and-debugging-ml-models/hyperparameter-tuning"
+        },
+        {
+          "name": "Difference between Hyperparameters and Model Parameters",
+          "source": "https://www.ibm.com/topics/hyperparameters"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Hyperparameters vs. Model Parameters",
+    "summary": {
+      "title": "A Deep Dive into Hyperparameters vs. Model Parameters",
+      "body": "Understanding the distinction between hyperparameters and model parameters is fundamental to machine learning. A **hyperparameter** is an external configuration that the user sets manually before training begins. These are the high-level settings that govern the training process itself. Examples include the learning rate, the number of epochs, or the number of trees in a random forest. A **model parameter**, on the other hand, is an internal value that the model learns from the training data. These are the weights and biases of a neural network or the coefficients in a linear regression model. The goal of the training process is to find the optimal values for these parameters to minimize the model's error. In short, you choose the hyperparameters, and the algorithm learns the model parameters. ",
+      "sources": [
+        {
+          "name": "IBM: What are Hyperparameters?",
+          "source": "https://www.ibm.com/topics/hyperparameters"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Model weights",
+          "source": "https://developers.google.com/machine-learning/glossary#weight"
+        },
+        {
+          "name": "Model biases",
+          "source": "https://developers.google.com/machine-learning/glossary#bias"
+        },
+        {
+          "name": "Learning rate",
+          "source": "https://towardsdatascience.com/understanding-learning-rates-in-machine-learning-d6c19f56e9c9"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Model weights",
+    "summary": {
+      "title": "A Deep Dive into Model Weights",
+      "body": "In a neural network, **weights** are numerical parameters that represent the strength of the connection between two neurons. Think of them as the 'importance' of an input signal from one neuron to the next. When a signal is passed from one neuron to the next, it is multiplied by its corresponding weight. During the training process, the model learns and adjusts these weights to find the best values that enable it to make accurate predictions. This adjustment is a key part of the learning process, guided by the backpropagation algorithm and an optimizer like gradient descent, which aims to minimize the model's loss function. Essentially, weights are what the model 'learns' from the data to map inputs to outputs. ",
+      "sources": [
+        {
+          "name": "Google Developers: Weight",
+          "source": "https://developers.google.com/machine-learning/glossary#weight"
+        },
+        {
+          "name": "Towards Data Science: Weights and Biases in Neural Networks",
+          "source": "https://towardsdatascience.com/weights-and-biases-in-neural-networks-4172f3e46c76"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Model biases",
+          "source": "https://developers.google.com/machine-learning/glossary#bias"
+        },
+        {
+          "name": "Backpropagation",
+          "source": "https://cs231n.github.io/optimization-2/"
+        },
+        {
+          "name": "Gradient descent",
+          "source": "https://builtin.com/data-science/gradient-descent"
+        },
+        {
+          "name": "Loss function",
+          "source": "https://developers.google.com/machine-learning/glossary#loss"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Bias in a neural network",
+    "summary": {
+      "title": "A Deep Dive into Bias in a Neural Network",
+      "body": "In a neural network, a **bias** is a numerical parameter added to the weighted sum of inputs for each neuron. It serves as an offset or threshold, essentially making it easier or harder for a neuron to 'fire' or activate. A neuron's activation is a weighted sum of its inputs plus the bias. The bias term gives the model an extra degree of freedom, allowing it to fit data that doesn't pass through the origin. Without a bias, the model's decision boundary would always be a linear line passing through the origin, severely limiting its ability to learn complex patterns. The bias, like the weights, is an internal model parameter that is learned and adjusted during the training process to improve the model's accuracy. ",
+      "sources": [
+        {
+          "name": "Google Developers: Bias",
+          "source": "https://developers.google.com/machine-learning/glossary#bias"
+        },
+        {
+          "name": "Simplilearn: Weights and Bias in Neural Network",
+          "source": "https://www.simplilearn.com/tutorials/deep-learning-tutorial/weights-and-bias-in-neural-network"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Activation functions",
+          "source": "https://developers.google.com/machine-learning/crash-course/neural-nets-with-tensorflow/activation-functions"
+        },
+        {
+          "name": "Weighted sum",
+          "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+        },
+        {
+          "name": "Loss function",
+          "source": "https://developers.google.com/machine-learning/glossary#loss"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Determining weights and biases",
+    "summary": {
+      "title": "A Deep Dive into Determining Weights and Biases",
+      "body": "The process of determining the optimal values for a neural network's weights and biases is the essence of training. It is an iterative, data-driven process that begins with a random initialization of these parameters. The training cycle then follows these steps:\n\n1.  **Forward Pass**: The input data is fed through the network from the input layer to the output layer, with weights and biases applied at each neuron to produce a prediction.\n2.  **Loss Calculation**: The model's prediction is compared to the actual target value using a **loss function**, which quantifies the error.\n3.  **Backpropagation**: The loss is propagated backward through the network. This calculates the **gradient** of the loss with respect to each weight and bias, telling the model how much and in what direction each parameter needs to be adjusted.\n4.  **Parameter Update**: An **optimizer**, such as gradient descent, uses the gradients to update the weights and biases. The **learning rate** hyperparameter controls the size of these updates.\n\nThis cycle is repeated over many epochs, with the weights and biases gradually converging to values that minimize the loss, thereby improving the model's predictive power. ",
+      "sources": [
+        {
+          "name": "Built In: Backpropagation in Neural Networks",
+          "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+        },
+        {
+          "name": "Jeremy Jordan: Training Neural Networks",
+          "source": "https://www.jeremyjordan.me/neural-networks-training/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Backpropagation",
+          "source": "https://cs231n.github.io/optimization-2/"
+        },
+        {
+          "name": "Gradient descent",
+          "source": "https://builtin.com/data-science/gradient-descent"
+        },
+        {
+          "name": "Optimizer",
+          "source": "https://cs231n.github.io/neural-networks-3/#update"
+        },
+        {
+          "name": "Loss function",
+          "source": "https://developers.google.com/machine-learning/glossary#loss"
+        },
+        {
+          "name": "Learning rate",
+          "source": "https://towardsdatascience.com/understanding-learning-rates-in-machine-learning-d6c19f56e9c9"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Signal flow through a neuron",
+    "summary": {
+      "title": "A Deep Dive into Signal Flow Through a Neuron",
+      "body": "The flow of a signal through a single neuron can be broken down into a series of simple steps. First, an input signal from a previous layer is received. This signal is multiplied by a numerical value called a **weight**, which determines its importance. A neuron receives multiple weighted inputs from all the neurons in the preceding layer. These weighted inputs are then summed together, and a **bias** value is added to this sum. This intermediate result is called the 'pre-activation' or 'net input.' Finally, this value is passed through an **activation function**. The activation function introduces non-linearity and determines the final output of the neuron. This output then serves as an input for the neurons in the next layer, propagating the signal forward through the network. ",
+      "sources": [
+        {
+          "name": "YouTube: How a neuron works (by 3Blue1Brown)",
+          "source": "https://www.youtube.com/watch?v=aircAruvnKk"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Weighted sum",
+          "source": "https://builtin.com/data-science/backpropagation-neural-networks"
+        },
+        {
+          "name": "Pre-activation (net input)",
+          "source": "https://developers.google.com/machine-learning/glossary#preactivation"
+        },
+        {
+          "name": "Activation function",
+          "source": "https://developers.google.com/machine-learning/crash-course/neural-nets-with-tensorflow/activation-functions"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Neural network output for classification",
+    "summary": {
+      "title": "A Deep Dive into Neural Network Outputs for Classification",
+      "body": "The output layer of a neural network is designed to make a final prediction, and its configuration depends on the type of task. For a **classification task**, the goal is to predict a category or class. The output layer's neurons correspond to each of the possible classes. For **multi-class classification** (more than two classes), the **Softmax** activation function is typically used. Softmax takes the raw output values (logits) of the neurons and normalizes them into a **probability distribution** that sums to 1. The class with the highest probability is then chosen as the model's final prediction. For **binary classification** (two classes), a **Sigmoid** activation function is often used. It squashes the output into a value between 0 and 1, which can be interpreted as the probability of belonging to the positive class. A threshold (e.g., 0.5) is then applied to make the final class decision. ",
+      "sources": [
+        {
+          "name": "IBM: What is the Softmax function?",
+          "source": "https://www.ibm.com/topics/softmax-function"
+        },
+        {
+          "name": "Towards Data Science: Activation Functions in Neural Networks",
+          "source": "https://towardsdatascience.com/activation-functions-in-neural-networks-94916a847e33"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Softmax activation function",
+          "source": "https://deeplearning.ai/ai-notes/basics-of-softmax/"
+        },
+        {
+          "name": "Sigmoid activation function",
+          "source": "https://machinelearningmastery.com/sigmoid-activation-function-for-deep-learning/"
+        },
+        {
+          "name": "Logits",
+          "source": "https://developers.google.com/machine-learning/glossary#logit"
+        },
+        {
+          "name": "Probability distribution",
+          "source": "https://www.ibm.com/topics/probability-distribution"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Neural network output for regression",
+    "summary": {
+      "title": "A Deep Dive into Neural Network Outputs for Regression",
+      "body": "In a **regression task**, the goal is to predict a continuous numerical value (e.g., house price, temperature). The output layer of the neural network is configured differently than for classification. It typically consists of a **single neuron** that directly outputs the predicted value. This neuron uses a **linear activation function**, or effectively no activation function at all, which allows it to produce any real-valued number as its output. This raw output is the final prediction of the model. Unlike classification, there is no need to squash the output into a probability or use a threshold. The goal during training is to minimize the difference between this single output value and the actual continuous value from the training data. ",
+      "sources": [
+        {
+          "name": "Towards Data Science: Activation Functions",
+          "source": "https://towardsdatascience.com/activation-functions-in-neural-networks-94916a847e33"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Regression vs. Classification",
+          "source": "https://developers.google.com/machine-learning/crash-course/classification/regression-vs-classification"
+        },
+        {
+          "name": "Linear activation function",
+          "source": "https://medium.com/@shahbaz.ahmad/linear-activation-function-14f7b2f6764"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Learning rate hyperparameter",
+    "summary": {
+      "title": "A Deep Dive into the Learning Rate Hyperparameter",
+      "body": "The **learning rate** is a critical hyperparameter that controls how much the model's weights and biases are adjusted during each training iteration. It is a scaling factor for the gradient. In the optimization process, the gradient points in the direction of the steepest increase in loss. The learning rate determines the size of the step taken in the opposite direction (down the loss surface). A **small** learning rate can make the training process very slow and risk getting stuck in a local minimum. Conversely, a **large** learning rate can cause the model to overshoot the optimal solution, leading to unstable training or the model diverging completely. Finding the right learning rate is often one of the most challenging and important aspects of training a deep learning model. It is a key factor in the performance and stability of the training process. ",
+      "sources": [
+        {
+          "name": "IBM: Learning Rate",
+          "source": "https://www.ibm.com/topics/learning-rate"
+        },
+        {
+          "name": "DeepLearning.AI: Learning Rate",
+          "source": "https://www.deeplearning.ai/ai-notes/learning-rate/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Gradient descent",
+          "source": "https://builtin.com/data-science/gradient-descent"
+        },
+        {
+          "name": "Optimizer algorithms (e.g., Adam, SGD, RMSprop)",
+          "source": "https://cs231n.github.io/neural-networks-3/#update"
+        },
+        {
+          "name": "Loss function",
+          "source": "https://developers.google.com/machine-learning/glossary#loss"
+        }
+      ]
+    }
+  },
+  {
+    "topic": "Batch size hyperparameter",
+    "summary": {
+      "title": "A Deep Dive into the Batch Size Hyperparameter",
+      "body": "The **batch size** is a hyperparameter that defines the number of training examples to be processed in one iteration of training before the model's internal parameters (weights and biases) are updated. It is a key trade-off between the accuracy of the gradient estimate and the speed of computation. A **large batch size** means the model processes more data before each update, providing a more stable and accurate estimate of the gradient. However, this requires more memory, slows down each iteration, and can lead to the model converging to a sharp, less-generalizable minimum. A **small batch size** (e.g., mini-batch) or a batch size of one (stochastic gradient descent) provides a noisier, less accurate gradient estimate, but it requires less memory and can lead to faster training and better generalization. The choice of batch size is often a balancing act between available hardware resources and the desired training dynamics. ",
+      "sources": [
+        {
+          "name": "Google Developers: Batch Size",
+          "source": "https://developers.google.com/machine-learning/glossary#batch-size"
+        },
+        {
+          "name": "NVIDIA: Large Batch Training of Neural Networks",
+          "source": "https://developer.nvidia.com/blog/large-batch-training-neural-networks/"
+        }
+      ],
+      "related_concepts": [
+        {
+          "name": "Gradient descent",
+          "source": "https://builtin.com/data-science/gradient-descent"
+        },
+        {
+          "name": "Stochastic gradient descent (SGD)",
+          "source": "https://builtin.com/machine-learning/stochastic-gradient-descent"
+        },
+        {
+          "name": "Mini-batch gradient descent",
+          "source": "https://www.ibm.com/topics/mini-batch-gradient-descent"
+        },
+        {
+          "name": "GPU memory management",
+          "source": "https://pytorch.org/docs/stable/notes/cuda.html"
+        }
+      ]
+    }
+  }
+]
