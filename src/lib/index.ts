@@ -1,8 +1,14 @@
-import { acidjson } from "./data/flashcards/ACID.json"
-
-const ACID = acidjson;
+import { Flashes } from "./data/flashcards/Flashes"
 
 
-export const CardCategories = {
-    getCategories
+export const InfoCategories = {
+    getCategories: async () => {
+        const names: string[] = Flashes.map(flash => flash.name)
+        return names;
+    },
+
+    getFlashCardsByCategory: async (category: string) => {
+        const categoryInfo = Flashes.filter(flash => flash.name !== category);
+        return categoryInfo
+    }
 }
