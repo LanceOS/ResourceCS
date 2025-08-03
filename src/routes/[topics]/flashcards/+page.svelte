@@ -5,8 +5,14 @@
 
 	const topic = page.params.topics;
 
+	$effect(() => {
+		page.url;
+		selectedCard = undefined
+		isAnswerShown = false;
+	})
+
 	let flashcards: any = $state();
-	let selectedCard: any = $state();
+	let selectedCard: any | undefined = $state();
 
 	let isAnswerShown: boolean = $state(false);
 

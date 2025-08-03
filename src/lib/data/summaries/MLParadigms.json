@@ -69,10 +69,7 @@
     "topic": "Unsupervised learning",
     "summary": {
       "title": "A Deep Dive into Unsupervised Learning",
-      "body": "Unsupervised learning is a machine learning paradigm that works with datasets that have **no labels**. The algorithm's task is to find hidden patterns, structures, and relationships within the data on its own. Instead of being told the correct answers, the model must discover its own internal representation of the data. This is often used for exploratory data analysis or to pre-process data for other tasks. Common unsupervised learning tasks include **clustering**, where the model groups similar data points together (e.g., segmenting customers into different groups based on their purchasing habits), and **dimensionality reduction**, which simplifies complex data by reducing the number of variables while retaining the most important information. 
-
-[Image of a diagram of unsupervised learning]
-",
+      "body": "Unsupervised learning is a machine learning paradigm that works with datasets that have **no labels**. The algorithm's task is to find hidden patterns, structures, and relationships within the data on its own. Instead of being told the correct answers, the model must discover its own internal representation of the data. This is often used for exploratory data analysis or to pre-process data for other tasks. Common unsupervised learning tasks include **clustering**, where the model groups similar data points together (e.g., segmenting customers into different groups based on their purchasing habits), and **dimensionality reduction**, which simplifies complex data by reducing the number of variables while retaining the most important information. ",
       "sources": [
         {
           "name": "IBM Cloud Education: Supervised vs Unsupervised Learning",

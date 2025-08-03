@@ -96,10 +96,7 @@
     "topic": "Data Lake",
     "summary": {
       "title": "A Deep Dive into Data Lakes",
-      "body": "A **data lake** is a centralized repository that stores a massive amount of data in its raw, native format. It is designed to handle all types of data—structured, semi-structured, and unstructured. Unlike a data warehouse that requires a predefined schema (**schema-on-write**), a data lake uses a **schema-on-read** approach, which provides immense flexibility. This makes data lakes ideal for modern use cases such as advanced analytics, machine learning, and real-time processing, as they allow data scientists and analysts to explore and derive value from raw data. 
-
-[Image of a diagram of a data lake]
-",
+      "body": "A **data lake** is a centralized repository that stores a massive amount of data in its raw, native format. It is designed to handle all types of data—structured, semi-structured, and unstructured. Unlike a data warehouse that requires a predefined schema (**schema-on-write**), a data lake uses a **schema-on-read** approach, which provides immense flexibility. This makes data lakes ideal for modern use cases such as advanced analytics, machine learning, and real-time processing, as they allow data scientists and analysts to explore and derive value from raw data.",
       "sources": [
         {
           "name": "AWS - What is a Data Lake?",

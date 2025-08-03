@@ -63,10 +63,10 @@
 
 					{#if activeTopic === topic}
 						<div class="flex flex-col gap-2 py-2 pl-4">
-							<a href={`/${topic}/flashcards`} class="text-blue-600 underline hover:text-blue-800" onclick={() => {toggleMenu(), window.location.reload()}}
+							<a href={`/${topic}/flashcards`} class="text-blue-600 underline hover:text-blue-800" onclick={() => {toggleMenu()}}
 								>Flash Cards</a
 							>
-							<a href={`/${topic}/summaries`} class="text-blue-600 underline hover:text-blue-800" onclick={() => {toggleMenu(), window.location.reload()}}
+							<a href={`/${topic}/summaries`} class="text-blue-600 underline hover:text-blue-800" onclick={() => {toggleMenu()}}
 								>Summaries</a
 							>
 						</div>
