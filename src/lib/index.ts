@@ -8,7 +8,7 @@ export const InfoCategories = {
     },
 
     getFlashCardsByCategory: async (category: string) => {
-        const categoryInfo = Flashes.filter(flash => flash.name !== category);
-        return categoryInfo
+        const categoryInfo = Flashes.filter(flash => flash.name === category);
+        return categoryInfo[0]
     }
 }
