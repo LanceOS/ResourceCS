@@ -30,16 +30,23 @@
 
 <div class="h-fit min-h-screen bg-[#f8f9fa]">
 	<main class="mx-auto flex min-h-screen max-w-5xl flex-col justify-center gap-4 px-6 py-24">
-		<div class="w-full space-y-4 border p-8 duration-200 rounded-md">
+		<div class="w-full space-y-4 rounded-md border p-8 duration-200">
 			{#if selectedCard}
 				<h1 class="text-xl font-semibold sm:text-3xl">{selectedCard.question}</h1>
 				{#if isAnswerShown}
 					<p>{selectedCard.answer}</p>
 
 					<div class="flex flex-col gap-2">
-                        <h2 class="font-bold text-md">Sources:</h2>
+						<h2 class="text-md font-bold">Sources:</h2>
 						{#each selectedCard.sources as source}
 							<a href={source.source} class="text-blue-500 underline">{source.name}</a>
+						{/each}
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<h2 class="text-md font-bold">Additional Topics:</h2>
+						{#each selectedCard.additional_topics as add}
+							<a href={add.source} class="text-blue-500 underline">{add.topic}</a>
 						{/each}
 					</div>
 				{/if}
